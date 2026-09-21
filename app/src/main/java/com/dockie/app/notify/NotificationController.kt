@@ -12,20 +12,34 @@ import com.dockie.app.R
 import com.dockie.app.service.DockMonitoringService
 
 object NotificationController {
-    const val CHANNEL_ID = "dockie_status"
+    const val CHANNEL_STATUS = "dockie_status"
+    const val CHANNEL_ALERT = "dockie_alert"
     const val NOTIFICATION_ID = 1001
+    const val ALERT_NOTIFICATION_ID = 1002
 
     const val ACTION_DISABLE = "com.dockie.app.ACTION_DISABLE"
     const val ACTION_OPEN = "com.dockie.app.ACTION_OPEN"
 
-    fun ensureChannel(context: Context) {
+    /**
+     * Ongoing status channel. [withIcon] controls IMPORTANCE_LOW (status-bar
+     * icon visible) vs IMPORTANCE_MIN (notification lives only in the shade).
+     * Android keeps the importance once a channel exists, so a changed
+     * preference deletes and recreates the channel.
+     */
+    fun syncStatusChannel(context: Context, withIcon: Boolean) {
         val manager = context.getSystemService(NotificationManager::class.java) ?: return
-        val existing = manager.getNotificationChannel(CHANNEL_ID)
-        if (existing != null) return
+        val want = if (withIcon) {
+            NotificationManager.IMPORTANCE_LOW
+        } else {
+            NotificationManager.IMPORTANCE_MIN
+        }
+        val existing = manager.getNotificationChannel(CHANNEL_STATUS)
+        if (existing != null && existing.importance == want) return
+        if (existing != null) manager.deleteNotificationChannel(CHANNEL_STATUS)
         val channel = NotificationChannel(
-            CHANNEL_ID,
+            CHANNEL_STATUS,
             context.getString(R.string.notification_channel_name),
-            NotificationManager.IMPORTANCE_LOW,
+            want,
         ).apply {
             description = context.getString(R.string.notification_channel_desc)
             setShowBadge(false)
@@ -35,8 +49,35 @@ object NotificationController {
         manager.createNotificationChannel(channel)
     }
 
-    fun build(context: Context, docked: Boolean): Notification {
-        ensureChannel(context)
+    fun ensureAlertChannel(context: Context) {
+        val manager = context.getSystemService(NotificationManager::class.java) ?: return
+        if (manager.getNotificationChannel(CHANNEL_ALERT) != null) return
+        val channel = NotificationChannel(
+            CHANNEL_ALERT,
+            context.getString(R.string.notification_channel_alert_name),
+            NotificationManager.IMPORTANCE_DEFAULT,
+        ).apply {
+            description = context.getString(R.string.notification_channel_alert_desc)
+            setShowBadge(false)
+            enableVibration(false)
+            setSound(null, null)
+        }
+        manager.createNotificationChannel(channel)
+    }
+
+    /** Backwards-compatible entry point used by DockieApp. */
+    fun ensureChannel(context: Context) {
+        syncStatusChannel(context, withIcon = true)
+        ensureAlertChannel(context)
+    }
+
+    fun build(
+        context: Context,
+        docked: Boolean,
+        withIcon: Boolean = true,
+        statusExtra: String? = null,
+    ): Notification {
+        syncStatusChannel(context, withIcon)
 
         val openIntent = Intent(context, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -54,14 +95,15 @@ object NotificationController {
         )
 
         val title = context.getString(R.string.app_name)
-        val text = if (docked) {
+        var text = if (docked) {
             context.getString(R.string.notification_active)
         } else {
             context.getString(R.string.notification_monitoring)
         }
+        if (!statusExtra.isNullOrBlank()) text += " · $statusExtra"
         val icon = if (docked) R.drawable.ic_notification_active else R.drawable.ic_notification_idle
 
-        return NotificationCompat.Builder(context, CHANNEL_ID)
+        return NotificationCompat.Builder(context, CHANNEL_STATUS)
             .setContentTitle(title)
             .setContentText(text)
             .setSmallIcon(icon)
@@ -76,5 +118,34 @@ object NotificationController {
                 disablePending,
             )
             .build()
+    }
+
+    /** One-time heads-up shown when a dock session starts keeping the screen awake. */
+    fun postDockedAlert(context: Context) {
+        ensureAlertChannel(context)
+        val openIntent = Intent(context, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP
+        }
+        val openPending = PendingIntent.getActivity(
+            context, 2, openIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+        )
+        val notification = NotificationCompat.Builder(context, CHANNEL_ALERT)
+            .setContentTitle(context.getString(R.string.app_name))
+            .setContentText(context.getString(R.string.notification_alert_text))
+            .setSmallIcon(R.drawable.ic_notification_active)
+            .setContentIntent(openPending)
+            .setAutoCancel(true)
+            .setShowWhen(true)
+            .setCategory(NotificationCompat.CATEGORY_STATUS)
+            .build()
+        try {
+            val manager = context.getSystemService(NotificationManager::class.java)
+            manager?.notify(ALERT_NOTIFICATION_ID, notification)
+        } catch (_: SecurityException) {
+            // POST_NOTIFICATIONS denied on Android 13+: the quiet status
+            // notification still works; the one-time alert is simply skipped.
+        } catch (_: Exception) {
+        }
     }
 }

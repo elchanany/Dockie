@@ -83,6 +83,38 @@ reporting `BATTERY_PLUGGED_WIRELESS` as the plugged source — including at
 100% or when Samsung battery protection pauses charging at a threshold —
 Dockie stays active.
 
+## Stay-awake duration
+
+Settings → While docked: keep the screen awake **until you remove it**
+(default) or for a fixed window (5/15/30 minutes, 1/2/4/8 hours). A timed
+window ends automatically even if the phone is still docked: the exact saved
+timeout is restored and the deadline persists across process restarts, so a
+dead-then-revived process still expires on time. The main screen and the
+status notification show a live countdown ("24 min left"). A new duration
+applies to the next dock session.
+
+## Docking alert and status-bar icon
+
+- When a dock session starts, Dockie posts a one-time heads-up
+  ("Screen will stay awake while docked"). Toggle: Settings → Docking alert.
+  On Android 13+ this needs the system notification permission; Dockie asks
+  for it when you enable monitoring, and silently skips the alert if denied.
+- The quiet ongoing notification shows a small status-bar icon by default.
+  Toggle: Settings → Status bar icon (off = shade-only entry). Android always
+  requires a silent entry while the foreground monitor runs, so it cannot be
+  removed entirely — only quieted.
+
+## After a manual screen-off
+
+Dockie never forces the screen on; the power button always works. What
+happens next is configurable (Settings → Screen off):
+
+- **Stay active** (default): unlocking while still docked keeps the long
+  timeout — Dockie resumes seamlessly.
+- **Pause until re-docked**: turning the screen off restores your saved
+  timeout immediately and pauses Dockie; lift the phone and put it back to
+  resume. The main screen shows a calm "Paused" state.
+
 ## State-restoration strategy
 
 Persisted in DataStore: enabled flag, saved original timeout, override

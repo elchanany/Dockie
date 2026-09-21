@@ -20,6 +20,8 @@ sealed interface AppState {
     /** Enabled and wireless power present — timeout override active. */
     data class Docked(
         val batteryPercent: Int? = null,
+        /** True when paused after a manual screen-off until re-docked. */
+        val paused: Boolean = false,
     ) : AppState
 
     /** Something unexpected; UI shows a calm retry state. */

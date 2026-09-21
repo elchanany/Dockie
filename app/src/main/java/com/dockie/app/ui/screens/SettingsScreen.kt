@@ -1,6 +1,5 @@
 package com.dockie.app.ui.screens
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -36,6 +35,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import com.dockie.app.BuildConfig
+import com.dockie.app.data.DockieRepository.Companion.MODE_PAUSE
+import com.dockie.app.data.DockieRepository.Companion.MODE_RESUME
+import com.dockie.app.power.AwakeFormat
 import com.dockie.app.ui.AdvancedInfo
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -43,9 +45,17 @@ import com.dockie.app.ui.AdvancedInfo
 fun SettingsScreen(
     themePreference: String,
     startAfterRestart: Boolean,
+    alertOnDock: Boolean,
+    statusIcon: Boolean,
+    awakeMinutes: Int,
+    screenOffMode: String,
     advanced: AdvancedInfo,
     onThemeChange: (String) -> Unit,
     onStartAfterRestartChange: (Boolean) -> Unit,
+    onAlertOnDockChange: (Boolean) -> Unit,
+    onStatusIconChange: (Boolean) -> Unit,
+    onAwakeMinutesChange: (Int) -> Unit,
+    onScreenOffModeChange: (String) -> Unit,
     onBack: () -> Unit,
     onRefreshAdvanced: () -> Unit,
     modifier: Modifier = Modifier,
@@ -75,25 +85,117 @@ fun SettingsScreen(
                 .padding(horizontal = 20.dp, vertical = 8.dp),
             verticalArrangement = Arrangement.spacedBy(20.dp),
         ) {
-            Section("General") {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    Column(Modifier.weight(1f)) {
-                        Text("Start after restart", style = MaterialTheme.typography.titleMedium)
-                        Text(
-                            "Resume watching for your dock after a reboot.",
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
+            Section("While docked") {
+                Text(
+                    "How long should the screen stay awake?",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                Spacer(Modifier.height(4.dp))
+                Column(Modifier.selectableGroup()) {
+                    AwakeFormat.PRESETS_MINUTES.forEach { minutes ->
+                        val selected = awakeMinutes == minutes
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .selectable(
+                                    selected = selected,
+                                    role = Role.RadioButton,
+                                    onClick = { onAwakeMinutesChange(minutes) },
+                                )
+                                .padding(vertical = 6.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            RadioButton(
+                                selected = selected,
+                                onClick = { onAwakeMinutesChange(minutes) },
+                            )
+                            Spacer(Modifier.width(8.dp))
+                            Text(
+                                AwakeFormat.label(minutes),
+                                style = MaterialTheme.typography.bodyLarge,
+                            )
+                        }
                     }
-                    Spacer(Modifier.width(12.dp))
-                    Switch(
-                        checked = startAfterRestart,
-                        onCheckedChange = onStartAfterRestartChange,
-                    )
                 }
+                Text(
+                    "A new duration applies to the next dock session.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f),
+                )
+            }
+
+            Section("Notifications") {
+                SwitchRow(
+                    title = "Docking alert",
+                    body = "One-time heads-up when Dockie starts keeping the screen awake. " +
+                        "Needs system notifications allowed for Dockie.",
+                    checked = alertOnDock,
+                    onCheckedChange = onAlertOnDockChange,
+                )
+                Spacer(Modifier.height(12.dp))
+                SwitchRow(
+                    title = "Status bar icon",
+                    body = "Show the small Dockie icon at the top while monitoring. " +
+                        "Off keeps a silent shade-only entry. Android always requires " +
+                        "a silent entry while Dockie is active.",
+                    checked = statusIcon,
+                    onCheckedChange = onStatusIconChange,
+                )
+            }
+
+            Section("Screen off") {
+                Text(
+                    "When you turn the screen off with the power button while docked:",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                Spacer(Modifier.height(4.dp))
+                Column(Modifier.selectableGroup()) {
+                    listOf(
+                        MODE_RESUME to "Stay active",
+                        MODE_PAUSE to "Pause until re-docked",
+                    ).forEach { (value, label) ->
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .selectable(
+                                    selected = screenOffMode == value,
+                                    role = Role.RadioButton,
+                                    onClick = { onScreenOffModeChange(value) },
+                                )
+                                .padding(vertical = 6.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            RadioButton(
+                                selected = screenOffMode == value,
+                                onClick = { onScreenOffModeChange(value) },
+                            )
+                            Spacer(Modifier.width(8.dp))
+                            Column {
+                                Text(label, style = MaterialTheme.typography.bodyLarge)
+                                Text(
+                                    if (value == MODE_RESUME) {
+                                        "Unlock and the screen keeps staying awake."
+                                    } else {
+                                        "Timeout is restored; lift and re-dock to resume."
+                                    },
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
+            Section("General") {
+                SwitchRow(
+                    title = "Start after restart",
+                    body = "Resume watching for your dock after a reboot.",
+                    checked = startAfterRestart,
+                    onCheckedChange = onStartAfterRestartChange,
+                )
             }
 
             Section("Appearance") {
@@ -146,6 +248,8 @@ fun SettingsScreen(
                 SettingsRow("Current timeout", advanced.currentTimeout)
                 SettingsRow("Saved timeout", advanced.savedTimeout)
                 SettingsRow("Override active", if (advanced.overrideActive) "Yes" else "No")
+                SettingsRow("Awake mode", advanced.awakeMode)
+                SettingsRow("Override ends in", advanced.overrideEnds)
                 SettingsRow("Service status", if (advanced.serviceRunning) "Running" else "Stopped")
                 Spacer(Modifier.height(4.dp))
                 Text(
@@ -156,6 +260,33 @@ fun SettingsScreen(
             }
             Spacer(Modifier.height(24.dp))
         }
+    }
+}
+
+@Composable
+private fun SwitchRow(
+    title: String,
+    body: String,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit,
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Column(Modifier.weight(1f)) {
+            Text(title, style = MaterialTheme.typography.titleMedium)
+            Text(
+                body,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+        Spacer(Modifier.width(12.dp))
+        Switch(
+            checked = checked,
+            onCheckedChange = onCheckedChange,
+        )
     }
 }
 

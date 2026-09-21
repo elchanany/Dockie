@@ -33,6 +33,12 @@ class DockieRepository(private val appContext: Context) {
         val SAVED_TIMEOUT = longPreferencesKey("saved_timeout_ms")
         val START_AFTER_RESTART = booleanPreferencesKey("start_after_restart")
         val THEME = stringPreferencesKey("theme") // system | light | dark
+        val ALERT_ON_DOCK = booleanPreferencesKey("alert_on_dock")
+        val STATUS_ICON = booleanPreferencesKey("status_icon")
+        val AWAKE_MINUTES = intPreferencesKey("awake_minutes") // 0 = until removed
+        val OVERRIDE_UNTIL_ELAPSED = longPreferencesKey("override_until_elapsed") // 0 = none
+        val SCREEN_OFF_MODE = stringPreferencesKey("screen_off_mode") // resume | pause
+        val SCREEN_PAUSED = booleanPreferencesKey("screen_paused")
     }
 
     val enabled: Flow<Boolean> =
@@ -52,6 +58,64 @@ class DockieRepository(private val appContext: Context) {
 
     val theme: Flow<String> =
         appContext.dockieDataStore.data.map { it[Keys.THEME] ?: "system" }
+
+    val alertOnDock: Flow<Boolean> =
+        appContext.dockieDataStore.data.map { it[Keys.ALERT_ON_DOCK] ?: true }
+
+    val statusIcon: Flow<Boolean> =
+        appContext.dockieDataStore.data.map { it[Keys.STATUS_ICON] ?: true }
+
+    val awakeMinutes: Flow<Int> =
+        appContext.dockieDataStore.data.map { it[Keys.AWAKE_MINUTES] ?: 0 }
+
+    val screenOffMode: Flow<String> =
+        appContext.dockieDataStore.data.map { it[Keys.SCREEN_OFF_MODE] ?: MODE_RESUME }
+
+    suspend fun setAlertOnDock(value: Boolean) {
+        appContext.dockieDataStore.edit { it[Keys.ALERT_ON_DOCK] = value }
+    }
+
+    suspend fun setStatusIcon(value: Boolean) {
+        appContext.dockieDataStore.edit { it[Keys.STATUS_ICON] = value }
+    }
+
+    suspend fun setAwakeMinutes(value: Int) {
+        appContext.dockieDataStore.edit { it[Keys.AWAKE_MINUTES] = value }
+    }
+
+    suspend fun setScreenOffMode(value: String) {
+        appContext.dockieDataStore.edit { it[Keys.SCREEN_OFF_MODE] = value }
+    }
+
+    suspend fun setOverrideUntil(elapsedRealtimeMs: Long) {
+        appContext.dockieDataStore.edit { it[Keys.OVERRIDE_UNTIL_ELAPSED] = elapsedRealtimeMs }
+    }
+
+    suspend fun clearOverrideUntil() {
+        appContext.dockieDataStore.edit { it.remove(Keys.OVERRIDE_UNTIL_ELAPSED) }
+    }
+
+    suspend fun getOverrideUntilNow(): Long =
+        appContext.dockieDataStore.data.map { it[Keys.OVERRIDE_UNTIL_ELAPSED] ?: 0L }.first()
+
+    suspend fun setScreenPaused(value: Boolean) {
+        appContext.dockieDataStore.edit { it[Keys.SCREEN_PAUSED] = value }
+    }
+
+    suspend fun isScreenPausedNow(): Boolean =
+        appContext.dockieDataStore.data.map { it[Keys.SCREEN_PAUSED] ?: false }.first()
+
+    suspend fun isAlertOnDockNow(): Boolean =
+        appContext.dockieDataStore.data.map { it[Keys.ALERT_ON_DOCK] ?: true }.first()
+
+    suspend fun isStatusIconNow(): Boolean =
+        appContext.dockieDataStore.data.map { it[Keys.STATUS_ICON] ?: true }.first()
+
+    suspend fun getAwakeMinutesNow(): Int =
+        appContext.dockieDataStore.data.map { it[Keys.AWAKE_MINUTES] ?: 0 }.first()
+
+    suspend fun getScreenOffModeNow(): String =
+        appContext.dockieDataStore.data.map { it[Keys.SCREEN_OFF_MODE] ?: MODE_RESUME }.first()
 
     suspend fun setEnabled(value: Boolean) {
         appContext.dockieDataStore.edit { it[Keys.ENABLED] = value }
@@ -95,4 +159,9 @@ class DockieRepository(private val appContext: Context) {
 
     suspend fun isFirstRunDoneNow(): Boolean =
         appContext.dockieDataStore.data.map { it[Keys.FIRST_RUN_DONE] ?: false }.first()
+
+    companion object {
+        const val MODE_RESUME = "resume"
+        const val MODE_PAUSE = "pause"
+    }
 }

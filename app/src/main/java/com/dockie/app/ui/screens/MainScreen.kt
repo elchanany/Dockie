@@ -5,7 +5,6 @@ import androidx.compose.animation.Crossfade
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -26,10 +25,12 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -38,16 +39,28 @@ import androidx.compose.ui.unit.dp
 import com.dockie.app.model.AppState
 import com.dockie.app.ui.components.DockieControl
 import com.dockie.app.ui.components.StatusCard
+import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen(
     appState: AppState,
+    remainingText: String?,
+    showCelebration: Boolean,
+    onCelebrationDismiss: () -> Unit,
     onToggle: () -> Unit,
     onRequestPermission: () -> Unit,
     onOpenSettings: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    // One-time "you're all set" confirmation after granting permission.
+    LaunchedEffect(showCelebration) {
+        if (showCelebration) {
+            delay(3_500)
+            onCelebrationDismiss()
+        }
+    }
+
     Scaffold(
         modifier = modifier,
         containerColor = MaterialTheme.colorScheme.background,
@@ -100,6 +113,26 @@ fun MainScreen(
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
+
+            AnimatedVisibility(
+                visible = showCelebration,
+                enter = fadeIn(tween(300)),
+                exit = fadeOut(tween(300)),
+            ) {
+                Surface(
+                    shape = RoundedCornerShape(20.dp),
+                    color = MaterialTheme.colorScheme.primaryContainer,
+                    modifier = Modifier.padding(top = 12.dp),
+                ) {
+                    Text(
+                        text = "✓ You're all set",
+                        style = MaterialTheme.typography.labelLarge,
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
+                    )
+                }
+            }
+
             Spacer(Modifier.height(28.dp))
 
             Crossfade(
@@ -111,6 +144,22 @@ fun MainScreen(
                     appState = appState,
                     onToggle = onToggle,
                     onRequestPermission = onRequestPermission,
+                )
+            }
+
+            // Timed session countdown, shown only while actively docked.
+            AnimatedVisibility(
+                visible = appState is AppState.Docked &&
+                    !(appState as AppState.Docked).paused &&
+                    remainingText != null,
+                enter = fadeIn(tween(300)),
+                exit = fadeOut(tween(200)),
+            ) {
+                Text(
+                    text = remainingText ?: "",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.padding(top = 12.dp),
                 )
             }
 
@@ -145,7 +194,13 @@ fun MainScreen(
             Spacer(Modifier.height(24.dp))
             Text(
                 text = when (appState) {
-                    is AppState.Docked -> "Take your phone off the charger and everything returns to normal."
+                    is AppState.Docked -> if (appState.paused) {
+                        "Dockie is paused. Lift the phone and put it back to resume."
+                    } else if (remainingText != null) {
+                        "Screen stays awake for $remainingText."
+                    } else {
+                        "Take your phone off the charger and everything returns to normal."
+                    }
                     is AppState.Monitoring -> "Put your phone on any wireless charger."
                     else -> ""
                 },

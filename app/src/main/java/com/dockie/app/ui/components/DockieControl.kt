@@ -63,14 +63,20 @@ fun DockieControl(
     val isDark = androidx.compose.foundation.isSystemInDarkTheme()
 
     val needsPermission = appState is AppState.PermissionRequired
-    val isDocked = appState is AppState.Docked
+    val dockedState = appState as? AppState.Docked
+    val isDocked = dockedState != null && !dockedState.paused
+    val isPaused = dockedState?.paused == true
     val isMonitoring = appState is AppState.Monitoring
     val isOff = appState is AppState.Disabled
 
     val (title, subtitle, icon) = when (appState) {
         is AppState.Disabled -> Triple("Dockie is off", "Tap to enable", Icons.Outlined.Bedtime)
         is AppState.Monitoring -> Triple("Ready", "Waiting for your dock", Icons.Outlined.ElectricalServices)
-        is AppState.Docked -> Triple("Docked", "Screen will stay awake", Icons.Outlined.Bolt)
+        is AppState.Docked -> if (appState.paused) {
+            Triple("Paused", "Lift and re-dock to resume", Icons.Outlined.Bedtime)
+        } else {
+            Triple("Docked", "Screen will stay awake", Icons.Outlined.Bolt)
+        }
         is AppState.PermissionRequired -> Triple("One quick setup", "Allow Dockie to control screen timeout", Icons.Outlined.Settings)
         is AppState.Onboarding -> Triple("Dockie", "Stay awake while docked", Icons.Outlined.ElectricalServices)
         is AppState.Error -> Triple("Something paused", (appState as AppState.Error).message, Icons.Outlined.Bedtime)

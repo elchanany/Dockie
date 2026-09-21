@@ -25,3 +25,9 @@ gradle.properties.local
 # OS / editor noise
 Thumbs.db
 *.swp
+
+# Local agent/knowledge-graph artifacts (environment-specific, never publish)
+.codex/
+graphify-out/
+AGENTS.md
+.gitattributes

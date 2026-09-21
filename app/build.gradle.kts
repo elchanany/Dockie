@@ -20,41 +20,11 @@ android {
         }
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = true
-            isShrinkResources = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-        debug {
-            applicationIdSuffix = ".debug"
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-    buildFeatures {
-        compose = true
-        buildConfig = true
-    }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
-
     signingConfigs {
         // Release signing is injected via environment / gradle.properties outside VCS:
         // DOCKIE_KEYSTORE_PATH, DOCKIE_KEYSTORE_PASSWORD, DOCKIE_KEY_ALIAS, DOCKIE_KEY_PASSWORD
         // or dockie.keystore.path etc. in ~/.gradle/gradle.properties (never committed).
+        // When no keystore is present the config stays empty and release builds unsigned.
         create("release") {
             val ksPath = (System.getenv("DOCKIE_KEYSTORE_PATH")
                 ?: (project.findProperty("dockie.keystore.path") as String?)
@@ -80,19 +50,43 @@ android {
         }
     }
 
-    // Attach the release signing config only when credentials are present.
-    // Otherwise the release build stays unsigned here (CI signs via secrets, see workflow).
-    afterEvaluate {
-        val releaseSigning = signingConfigs.getByName("release")
-        val hasStore = try {
-            releaseSigning.storeFile != null
-        } catch (_: Exception) {
-            false
+    buildTypes {
+        release {
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+            // Attach release signing only when a keystore was actually configured above.
+            // (CI provides it via secrets; see .github/workflows/release.yml.)
+            val releaseSigning = signingConfigs.getByName("release")
+            if (releaseSigning.storeFile != null) {
+                signingConfig = releaseSigning
+            }
         }
-        if (hasStore) {
-            buildTypes.getByName("release").signingConfig = releaseSigning
+        debug {
+            applicationIdSuffix = ".debug"
         }
     }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+
 }
 
 dependencies {

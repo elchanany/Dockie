@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Dockie state must not roam: screen-timeout values are device-specific. -->
+        <exclude domain="sharedpref" path="dockie_prefs.preferences_pb" />
+    </cloud-backup>
+</data-extraction-rules>

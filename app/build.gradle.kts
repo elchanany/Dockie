@@ -1,0 +1,118 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
+}
+
+android {
+    namespace = "com.dockie.app"
+    compileSdk = 35
+
+    defaultConfig {
+        applicationId = "com.dockie.app"
+        minSdk = 29
+        targetSdk = 35
+        versionCode = 1
+        versionName = "1.0.0"
+
+        vectorDrawables {
+            useSupportLibrary = true
+        }
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+        debug {
+            applicationIdSuffix = ".debug"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+
+    signingConfigs {
+        // Release signing is injected via environment / gradle.properties outside VCS:
+        // DOCKIE_KEYSTORE_PATH, DOCKIE_KEYSTORE_PASSWORD, DOCKIE_KEY_ALIAS, DOCKIE_KEY_PASSWORD
+        // or dockie.keystore.path etc. in ~/.gradle/gradle.properties (never committed).
+        create("release") {
+            val ksPath = (System.getenv("DOCKIE_KEYSTORE_PATH")
+                ?: (project.findProperty("dockie.keystore.path") as String?)
+                ?: (project.findProperty("DOCKIE_KEYSTORE_PATH") as String?))
+            val ksPass = (System.getenv("DOCKIE_KEYSTORE_PASSWORD")
+                ?: (project.findProperty("dockie.keystore.password") as String?)
+                ?: (project.findProperty("DOCKIE_KEYSTORE_PASSWORD") as String?))
+            val keyAlias = (System.getenv("DOCKIE_KEY_ALIAS")
+                ?: (project.findProperty("dockie.key.alias") as String?)
+                ?: (project.findProperty("DOCKIE_KEY_ALIAS") as String?)
+                ?: "dockie")
+            val keyPass = (System.getenv("DOCKIE_KEY_PASSWORD")
+                ?: (project.findProperty("dockie.key.password") as String?)
+                ?: (project.findProperty("DOCKIE_KEY_PASSWORD") as String?))
+            if (!ksPath.isNullOrBlank() && !ksPass.isNullOrBlank() && !keyPass.isNullOrBlank()
+                && file(ksPath).exists()
+            ) {
+                storeFile = file(ksPath)
+                storePassword = ksPass
+                this.keyAlias = keyAlias
+                keyPassword = keyPass
+            }
+        }
+    }
+
+    // Attach the release signing config only when credentials are present.
+    // Otherwise the release build stays unsigned here (CI signs via secrets, see workflow).
+    afterEvaluate {
+        val releaseSigning = signingConfigs.getByName("release")
+        val hasStore = try {
+            releaseSigning.storeFile != null
+        } catch (_: Exception) {
+            false
+        }
+        if (hasStore) {
+            buildTypes.getByName("release").signingConfig = releaseSigning
+        }
+    }
+}
+
+dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.kotlinx.coroutines.android)
+
+    val composeBom = libs.androidx.compose.bom
+    implementation(platform(composeBom))
+    androidTestImplementation(platform(composeBom))
+
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.icons.core)
+    implementation(libs.androidx.compose.material.icons.extended)
+}

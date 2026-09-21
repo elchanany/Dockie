@@ -23,7 +23,8 @@
     <string name="notification_active">Screen staying awake</string>
     <string name="notification_action_disable">Disable</string>
     <string name="notification_channel_alert_name">Dockie alerts</string>
-    <string name="notification_channel_alert_desc">One-time alert when Dockie starts keeping the screen awake.</string>
+    <string name="notification_channel_monitor_name">Dockie standby</string>
+    <string name="notification_channel_monitor_desc">Silent standby entry while Dockie watches for your dock. Never shows an icon.</string>    <string name="notification_channel_alert_desc">One-time alert when Dockie starts keeping the screen awake.</string>
     <string name="notification_alert_text">Screen will stay awake while docked</string>
     <string name="settings_title">Settings</string>
     <string name="settings_general">General</string>

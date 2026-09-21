@@ -16,6 +16,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.ArrowBack
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -25,10 +26,17 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.TimePicker
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.rememberTimePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -61,6 +69,19 @@ fun SettingsScreen(
     modifier: Modifier = Modifier,
 ) {
     LaunchedEffect(Unit) { onRefreshAdvanced() }
+    var showCustomPicker by remember { mutableStateOf(false) }
+    val isCustomDuration = awakeMinutes > 0 && awakeMinutes !in AwakeFormat.PRESETS_MINUTES
+
+    if (showCustomPicker) {
+        CustomDurationDialog(
+            initialMinutes = if (isCustomDuration) awakeMinutes else 30,
+            onDismiss = { showCustomPicker = false },
+            onConfirm = { total ->
+                onAwakeMinutesChange(total)
+                showCustomPicker = false
+            },
+        )
+    }
 
     Scaffold(
         modifier = modifier,
@@ -117,6 +138,31 @@ fun SettingsScreen(
                             )
                         }
                     }
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .selectable(
+                                selected = isCustomDuration,
+                                role = Role.RadioButton,
+                                onClick = { showCustomPicker = true },
+                            )
+                            .padding(vertical = 6.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        RadioButton(
+                            selected = isCustomDuration,
+                            onClick = { showCustomPicker = true },
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        Text(
+                            if (isCustomDuration) {
+                                "Custom · ${AwakeFormat.label(awakeMinutes)}"
+                            } else {
+                                "Custom…"
+                            },
+                            style = MaterialTheme.typography.bodyLarge,
+                        )
+                    }
                 }
                 Text(
                     "A new duration applies to the next dock session.",
@@ -136,9 +182,9 @@ fun SettingsScreen(
                 Spacer(Modifier.height(12.dp))
                 SwitchRow(
                     title = "Status bar icon",
-                    body = "Show the small Dockie icon at the top while monitoring. " +
-                        "Off keeps a silent shade-only entry. Android always requires " +
-                        "a silent entry while Dockie is active.",
+                    body = "Show the small Dockie icon at the top while docked. " +
+                        "Off keeps everything shade-only. While undocked Dockie " +
+                        "never shows an icon.",
                     checked = statusIcon,
                     onCheckedChange = onStatusIconChange,
                 )
@@ -263,9 +309,62 @@ fun SettingsScreen(
     }
 }
 
+/** Timer-style dial for an exact custom stay-awake duration (1 min – 12 h). */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun SwitchRow(
-    title: String,
+private fun CustomDurationDialog(
+    initialMinutes: Int,
+    onDismiss: () -> Unit,
+    onConfirm: (Int) -> Unit,
+) {
+    val pickerState = rememberTimePickerState(
+        initialHour = (initialMinutes / 60).coerceIn(0, 23),
+        initialMinute = (initialMinutes % 60).coerceIn(0, 59),
+        is24Hour = true,
+    )
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        confirmButton = {
+            TextButton(
+                onClick = {
+                    val total = pickerState.hour * 60 + pickerState.minute
+                    if (total <= 0) {
+                        onDismiss()
+                    } else {
+                        onConfirm(total.coerceAtMost(12 * 60))
+                    }
+                },
+            ) { Text("Set") }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) { Text("Cancel") }
+        },
+        shape = RoundedCornerShape(28.dp),
+        title = {
+            Text(
+                "Stay awake for",
+                style = MaterialTheme.typography.titleLarge,
+            )
+        },
+        text = {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                TimePicker(state = pickerState)
+                Spacer(Modifier.height(8.dp))
+                Text(
+                    "Up to 12 hours",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        },
+    )
+}
+
+@Composable
+private fun SwitchRow(    title: String,
     body: String,
     checked: Boolean,
     onCheckedChange: (Boolean) -> Unit,

@@ -85,6 +85,9 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     /** Milliseconds left in a timed session, or null when infinite/inactive. */
     val awakeRemainingMs = MutableStateFlow<Long?>(null)
 
+    /** True while still on the dock after a timed window already ended. */
+    val sessionExhausted = MutableStateFlow(false)
+
     val state: StateFlow<AppState> = combine(
         combine(
             repository.enabled,
@@ -96,13 +99,14 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
             DockieFlags(enabled, firstRun, permission, docked, paused)
         },
         combine(powerSource, batteryPercent) { source, pct -> PowerInfo(source, pct) },
-    ) { flags, power ->
+        sessionExhausted,
+    ) { flags, power, exhausted ->
         when {
             !flags.firstRun -> AppState.Onboarding
             !flags.permission -> AppState.PermissionRequired
             !flags.enabled -> AppState.Disabled
             flags.docked || power.source == PowerSource.WIRELESS ->
-                AppState.Docked(power.pct, paused = flags.paused)
+                AppState.Docked(power.pct, paused = flags.paused, timedOut = exhausted)
             else -> AppState.Monitoring(
                 batteryPercent = power.pct,
                 powerSourceLabel = ChargingStateObserver.label(power.source),
@@ -127,6 +131,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                 } else {
                     refreshPower()
                     awakeRemainingMs.value = null
+                    sessionExhausted.value = false
                 }
             }
         }
@@ -196,18 +201,19 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             val ctx = getApplication<Application>()
             repository.setStatusIcon(value)
-            NotificationController.syncStatusChannel(ctx, value)
             if (DockMonitoringService.isRunning.value) {
                 try {
                     val manager =
                         ctx.getSystemService(Context.NOTIFICATION_SERVICE) as? NotificationManager
+                    val docked = DockMonitoringService.docked.value
+                    manager?.cancel(NotificationController.NOTIFICATION_ID)
                     manager?.notify(
                         NotificationController.NOTIFICATION_ID,
-                        NotificationController.build(
-                            ctx,
-                            DockMonitoringService.docked.value,
-                            value,
-                        ),
+                        if (docked) {
+                            NotificationController.buildDocked(ctx, value)
+                        } else {
+                            NotificationController.buildMonitoring(ctx)
+                        },
                     )
                 } catch (_: Exception) {
                 }
@@ -265,8 +271,12 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     private suspend fun refreshRemaining() {
         if (!DockMonitoringService.docked.value) {
             awakeRemainingMs.value = null
+            // Still physically on the dock but the timed window already
+            // ended: show the calm "time's up" state instead of "docked".
+            sessionExhausted.value = isSessionExhausted()
             return
         }
+        sessionExhausted.value = false
         val minutes = repository.getAwakeMinutesNow()
         if (minutes <= 0) {
             awakeRemainingMs.value = null
@@ -278,6 +288,15 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
             return
         }
         awakeRemainingMs.value = (until - SystemClock.elapsedRealtime()).coerceAtLeast(0L)
+    }
+
+    private suspend fun isSessionExhausted(): Boolean {
+        if (powerSource.value != PowerSource.WIRELESS) return false
+        val minutes = repository.getAwakeMinutesNow()
+        if (minutes <= 0) return false
+        val until = repository.getOverrideUntilNow()
+        if (until <= 0) return false
+        return SystemClock.elapsedRealtime() >= until
     }
 
     companion object {

@@ -151,6 +151,7 @@ fun MainScreen(
             AnimatedVisibility(
                 visible = appState is AppState.Docked &&
                     !(appState as AppState.Docked).paused &&
+                    !(appState as AppState.Docked).timedOut &&
                     remainingText != null,
                 enter = fadeIn(tween(300)),
                 exit = fadeOut(tween(200)),
@@ -196,6 +197,8 @@ fun MainScreen(
                 text = when (appState) {
                     is AppState.Docked -> if (appState.paused) {
                         "Dockie is paused. Lift the phone and put it back to resume."
+                    } else if (appState.timedOut) {
+                        "Time's up — your timeout was restored. Lift and re-dock for another session."
                     } else if (remainingText != null) {
                         "Screen stays awake for $remainingText."
                     } else {

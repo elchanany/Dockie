@@ -25,8 +25,8 @@ import com.dockie.app.model.AppState
 @Composable
 fun StatusCard(appState: AppState, modifier: Modifier = Modifier) {
     val (line1, showBolt) = when (appState) {
-        is AppState.Docked -> if (appState.paused) {
-            ("Paused") to false
+        is AppState.Docked -> if (appState.paused || appState.timedOut) {
+            (if (appState.timedOut) "Time's up" else "Paused") to false
         } else {
             val pct = appState.batteryPercent?.let { "  ·  $it%" } ?: ""
             ("Wireless charging$pct") to true
@@ -40,6 +40,7 @@ fun StatusCard(appState: AppState, modifier: Modifier = Modifier) {
     }
     val line2 = when {
         appState is AppState.Docked && appState.paused -> "Lift and re-dock to resume"
+        appState is AppState.Docked && appState.timedOut -> "Lift and re-dock for more"
         appState is AppState.Docked -> "Dockie is keeping your screen awake"
         else -> null
     }

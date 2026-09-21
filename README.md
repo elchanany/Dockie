@@ -86,12 +86,14 @@ Dockie stays active.
 ## Stay-awake duration
 
 Settings → While docked: keep the screen awake **until you remove it**
-(default) or for a fixed window (5/15/30 minutes, 1/2/4/8 hours). A timed
+(default), pick a preset (5/15/30 minutes, 1/2/4/8 hours), or tap
+**Custom…** for an exact duration on a timer dial (1 minute – 12 hours). A timed
 window ends automatically even if the phone is still docked: the exact saved
 timeout is restored and the deadline persists across process restarts, so a
 dead-then-revived process still expires on time. The main screen and the
 status notification show a live countdown ("24 min left"). A new duration
-applies to the next dock session.
+applies to the next dock session. If the window ends while still docked, the
+main screen calmly shows "Time's up" until you lift and re-dock.
 
 ## Docking alert and status-bar icon
 
@@ -99,10 +101,14 @@ applies to the next dock session.
   ("Screen will stay awake while docked"). Toggle: Settings → Docking alert.
   On Android 13+ this needs the system notification permission; Dockie asks
   for it when you enable monitoring, and silently skips the alert if denied.
-- The quiet ongoing notification shows a small status-bar icon by default.
-  Toggle: Settings → Status bar icon (off = shade-only entry). Android always
-  requires a silent entry while the foreground monitor runs, so it cannot be
-  removed entirely — only quieted.
+- The status-bar icon appears **only while docked**. The moment you undock,
+  the icon disappears and the entry returns to a silent shade-only standby
+  note (Android requires a silent entry while the monitor runs, but it never
+  shows an icon while undocked). The one-time alert is always cancelled on
+  undock/disable/expiry, so no stale message ever lingers — exactly one
+  Dockie entry exists at any time.
+- Toggle: Settings → Status bar icon controls whether the docked entry shows
+  the icon; off keeps everything shade-only.
 
 ## After a manual screen-off
 

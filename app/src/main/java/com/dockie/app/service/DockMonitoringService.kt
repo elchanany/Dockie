@@ -124,8 +124,11 @@ class DockMonitoringService : Service() {
     }
 
     private suspend fun startForegroundQuietly(docked: Boolean) {
-        val withIcon = repo.isStatusIconNow()
-        val notification = NotificationController.build(this, docked, withIcon)
+        val notification = if (docked) {
+            NotificationController.buildDocked(this, repo.isStatusIconNow())
+        } else {
+            NotificationController.buildMonitoring(this)
+        }
         try {
             if (Build.VERSION.SDK_INT >= 29) {
                 ServiceCompat.startForeground(
@@ -148,13 +151,21 @@ class DockMonitoringService : Service() {
     }
 
     private suspend fun refreshNotification(docked: Boolean, statusExtra: String? = null) {
-        val withIcon = repo.isStatusIconNow()
         val manager = getSystemService(NOTIFICATION_SERVICE) as? android.app.NotificationManager
             ?: return
+        // Cancel-then-notify under one ID so the other channel's entry can
+        // never linger next to it — exactly one Dockie entry ever exists.
         try {
+            manager.cancel(NotificationController.NOTIFICATION_ID)
             manager.notify(
                 NotificationController.NOTIFICATION_ID,
-                NotificationController.build(this, docked, withIcon, statusExtra),
+                if (docked) {
+                    NotificationController.buildDocked(
+                        this, repo.isStatusIconNow(), statusExtra,
+                    )
+                } else {
+                    NotificationController.buildMonitoring(this)
+                },
             )
         } catch (e: Exception) {
             Log.w(TAG, "notify failed", e)
@@ -301,6 +312,8 @@ class DockMonitoringService : Service() {
     private suspend fun restoreLocked() {
         timerJob?.cancel()
         timerJob = null
+        // The session is over: the "staying awake" alert must not linger.
+        NotificationController.cancelAlert(this)
         val owns = repo.isOverrideActiveNow()
         if (!owns) {
             _docked.value = false
@@ -376,6 +389,7 @@ class DockMonitoringService : Service() {
         }
         timerJob?.cancel()
         timerJob = null
+        NotificationController.cancelAlert(this)
         resetState()
         scope.cancel()
         super.onDestroy()
@@ -470,6 +484,7 @@ object DockController {
 
     private suspend fun awaitDisableLocked(context: Context, repo: DockieRepository) {
         repo.setEnabled(false)
+        NotificationController.cancelAlert(context)
         if (repo.isOverrideActiveNow()) {
             val saved = repo.getSavedTimeoutNow()
             repo.clearOverride()

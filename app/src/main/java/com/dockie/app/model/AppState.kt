@@ -22,6 +22,8 @@ sealed interface AppState {
         val batteryPercent: Int? = null,
         /** True when paused after a manual screen-off until re-docked. */
         val paused: Boolean = false,
+        /** True while still docked after a timed window already ended. */
+        val timedOut: Boolean = false,
     ) : AppState
 
     /** Something unexpected; UI shows a calm retry state. */

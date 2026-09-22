@@ -29,6 +29,8 @@ play-service-account.json
 # OS / editor noise
 Thumbs.db
 *.swp
+hs_err_pid*.log
+replay_pid*.log
 
 # Local agent/knowledge-graph artifacts (environment-specific, never publish)
 .codex/

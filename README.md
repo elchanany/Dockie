@@ -98,7 +98,7 @@ main screen calmly shows "Time's up" until you lift and re-dock.
 ## Docking alert and status-bar icon
 
 - When a dock session starts, Dockie posts a one-time heads-up
-  ("Screen will stay awake while docked"). Toggle: Settings → Docking alert.
+  ("Dockie is active / Screen will stay awake"). Toggle: Settings → Docking alert.
   On Android 13+ this needs the system notification permission; Dockie asks
   for it when you enable monitoring, and silently skips the alert if denied.
 - The status-bar icon appears **only while docked**. The moment you undock,
@@ -189,6 +189,24 @@ Tagging `v*` triggers `.github/workflows/release.yml`, which builds, signs
 `DOCKIE_KEY_ALIAS` / `DOCKIE_KEY_PASSWORD` secrets), and attaches `Dockie.apk`
 to the GitHub Release.
 
+## Google Play (Internal Testing)
+
+A Play publishing setup is ready via Gradle Play Publisher
+(`./gradlew publishReleaseBundle`, track `internal`, AAB by default,
+release notes in `app/src/main/play/release-notes/en-US/internal.txt`).
+Credentials are never committed: put the Play Console service-account JSON at
+the repo root as `play-service-account.json` (gitignored).
+
+Two manual Play Console steps cannot be automated and are required once:
+1. Create the app in Play Console (`com.dockie.app`) and upload the first
+   AAB manually — the Play Developer API cannot register a new app.
+2. In App integrity, choose **"Use existing app signing key"** and provide
+   this project's key, so existing sideloaded installs keep updating
+   seamlessly. (If Google manages a new signing key instead, current APK
+   users would need a fresh install.)
+3. Complete the foreground-service (special use) declaration in App content,
+   and invite the service account under Users and permissions.
+
 ## Project structure
 
 ```
@@ -206,5 +224,5 @@ app/src/main/java/com/dockie/app/
   ui/MainViewModel.kt        declarative UI state
   ui/theme/                  warm light / OLED dark palettes, system type
   ui/components/             animated master control + status card
-  ui/screens/                main / onboarding / permission / settings
+  ui/screens/                main / onboarding flow / permission / settings
 ```

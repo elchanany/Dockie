@@ -1,6 +1,8 @@
 package com.dockie.app.ui.screens
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -9,6 +11,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
@@ -27,16 +33,20 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.material3.TimePicker
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
-import androidx.compose.material3.rememberTimePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -309,30 +319,28 @@ fun SettingsScreen(
     }
 }
 
-/** Timer-style dial for an exact custom stay-awake duration (1 min – 12 h). */
-@OptIn(ExperimentalMaterial3Api::class)
+/**
+ * Duration-style wheel picker (hours + minutes rollers with snapping),
+ * deliberately NOT a time-of-day clock. Zero dismisses without changing.
+ */
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 private fun CustomDurationDialog(
     initialMinutes: Int,
     onDismiss: () -> Unit,
     onConfirm: (Int) -> Unit,
 ) {
-    val pickerState = rememberTimePickerState(
-        initialHour = (initialMinutes / 60).coerceIn(0, 23),
-        initialMinute = (initialMinutes % 60).coerceIn(0, 59),
-        is24Hour = true,
-    )
+    val safeInitial = initialMinutes.coerceIn(0, 12 * 60)
+    var hours by remember { mutableStateOf((safeInitial / 60).coerceIn(0, 12)) }
+    var minutes by remember { mutableStateOf((safeInitial % 60).coerceIn(0, 59)) }
+    val total = hours * 60 + minutes
+
     AlertDialog(
         onDismissRequest = onDismiss,
         confirmButton = {
             TextButton(
                 onClick = {
-                    val total = pickerState.hour * 60 + pickerState.minute
-                    if (total <= 0) {
-                        onDismiss()
-                    } else {
-                        onConfirm(total.coerceAtMost(12 * 60))
-                    }
+                    if (total <= 0) onDismiss() else onConfirm(total.coerceAtMost(12 * 60))
                 },
             ) { Text("Set") }
         },
@@ -341,17 +349,45 @@ private fun CustomDurationDialog(
         },
         shape = RoundedCornerShape(28.dp),
         title = {
-            Text(
-                "Stay awake for",
-                style = MaterialTheme.typography.titleLarge,
-            )
+            Text("Stay awake for", style = MaterialTheme.typography.titleLarge)
         },
         text = {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.fillMaxWidth(),
             ) {
-                TimePicker(state = pickerState)
+                Text(
+                    text = if (total <= 0) "Pick a duration" else AwakeFormat.label(total),
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                )
+                Spacer(Modifier.height(12.dp))
+                Row(
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    WheelColumn(
+                        label = "Hours",
+                        items = (0..12).toList(),
+                        selected = hours,
+                        onSelect = { hours = it },
+                        modifier = Modifier.weight(1f),
+                    )
+                    Text(
+                        ":",
+                        style = MaterialTheme.typography.displaySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
+                        modifier = Modifier.padding(horizontal = 4.dp),
+                    )
+                    WheelColumn(
+                        label = "Minutes",
+                        items = (0..59).toList(),
+                        selected = minutes,
+                        onSelect = { minutes = it },
+                        modifier = Modifier.weight(1f),
+                    )
+                }
                 Spacer(Modifier.height(8.dp))
                 Text(
                     "Up to 12 hours",
@@ -361,6 +397,122 @@ private fun CustomDurationDialog(
             }
         },
     )
+}
+
+private const val WHEEL_PADDING = 2
+private const val WHEEL_VISIBLE = 5
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun WheelColumn(
+    label: String,
+    items: List<Int>,
+    selected: Int,
+    onSelect: (Int) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val itemHeight = 48.dp
+    val listState = rememberLazyListState()
+    val density = LocalDensity.current
+
+    LaunchedEffect(Unit) {
+        listState.scrollToItem(items.indexOf(selected).coerceAtLeast(0))
+    }
+    LaunchedEffect(listState.isScrollInProgress) {
+        if (!listState.isScrollInProgress) {
+            val layout = listState.layoutInfo
+            if (layout.visibleItemsInfo.isEmpty()) return@LaunchedEffect
+            val center =
+                (layout.viewportStartOffset + layout.viewportEndOffset) / 2
+            val centered = layout.visibleItemsInfo.minByOrNull {
+                kotlin.math.abs((it.offset + it.size / 2) - center)
+            }
+            val value = centered?.let { items.getOrNull(it.index - WHEEL_PADDING) }
+            if (value != null && value != selected) onSelect(value)
+        }
+    }
+
+    Column(
+        modifier = modifier.semantics {
+            contentDescription = "$label picker, $selected selected"
+        },
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Text(
+            label,
+            style = MaterialTheme.typography.labelMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Spacer(Modifier.height(6.dp))
+        Box(
+            modifier = Modifier
+                .height(itemHeight * WHEEL_VISIBLE)
+                .clip(RoundedCornerShape(20.dp))
+                .background(
+                    MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.55f),
+                ),
+            contentAlignment = Alignment.Center,
+        ) {
+            Box(
+                modifier = Modifier
+                    .padding(horizontal = 6.dp)
+                    .fillMaxWidth()
+                    .height(itemHeight)
+                    .background(
+                        MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.6f),
+                        RoundedCornerShape(14.dp),
+                    ),
+            )
+            LazyColumn(
+                state = listState,
+                flingBehavior = rememberSnapFlingBehavior(listState),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.matchParentSize(),
+            ) {
+                items(WHEEL_PADDING) {
+                    Spacer(Modifier.height(itemHeight))
+                }
+                items(items.size, key = { items[it] }) { i ->
+                    val layout = listState.layoutInfo
+                    val viewportCenter =
+                        (layout.viewportStartOffset + layout.viewportEndOffset) / 2f
+                    val info = layout.visibleItemsInfo.firstOrNull { it.index == i + WHEEL_PADDING }
+                    val distance = info?.let {
+                        kotlin.math.abs((it.offset + it.size / 2f) - viewportCenter)
+                    } ?: Float.MAX_VALUE
+                    val itemPx = with(density) { itemHeight.toPx() }
+                    val ratio = ((distance / itemPx).coerceIn(0f, 2f)) / 2f
+                    val scale = 1f - 0.22f * ratio
+                    val isSelected = items[i] == selected
+                    Box(
+                        modifier = Modifier
+                            .height(itemHeight)
+                            .fillMaxWidth(),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Text(
+                            text = "%02d".format(items[i]),
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
+                            color = if (isSelected) {
+                                MaterialTheme.colorScheme.onSurface
+                            } else {
+                                MaterialTheme.colorScheme.onSurfaceVariant
+                            },
+                            modifier = Modifier.graphicsLayer {
+                                scaleX = scale
+                                scaleY = scale
+                                alpha = 1f - 0.65f * ratio
+                            },
+                        )
+                    }
+                }
+                items(WHEEL_PADDING) {
+                    Spacer(Modifier.height(itemHeight))
+                }
+            }
+        }
+    }
 }
 
 @Composable

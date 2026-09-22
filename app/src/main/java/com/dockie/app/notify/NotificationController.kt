@@ -66,11 +66,15 @@ object NotificationController {
 
     fun ensureAlertChannel(context: Context) {
         val manager = context.getSystemService(NotificationManager::class.java) ?: return
-        if (manager.getNotificationChannel(CHANNEL_ALERT) != null) return
+        val existing = manager.getNotificationChannel(CHANNEL_ALERT)
+        // Heads-up peek needs HIGH. Channel importance is frozen after
+        // creation, so an older DEFAULT channel is deleted and recreated.
+        if (existing != null && existing.importance >= NotificationManager.IMPORTANCE_HIGH) return
+        if (existing != null) manager.deleteNotificationChannel(CHANNEL_ALERT)
         val channel = NotificationChannel(
             CHANNEL_ALERT,
             context.getString(R.string.notification_channel_alert_name),
-            NotificationManager.IMPORTANCE_DEFAULT,
+            NotificationManager.IMPORTANCE_HIGH,
         ).apply {
             description = context.getString(R.string.notification_channel_alert_desc)
             setShowBadge(false)
@@ -158,7 +162,7 @@ object NotificationController {
     fun postDockedAlert(context: Context) {
         ensureAlertChannel(context)
         val notification = NotificationCompat.Builder(context, CHANNEL_ALERT)
-            .setContentTitle(context.getString(R.string.app_name))
+            .setContentTitle(context.getString(R.string.notification_alert_title))
             .setContentText(context.getString(R.string.notification_alert_text))
             .setSmallIcon(R.drawable.ic_notification_active)
             .setContentIntent(openPending(context, 2))

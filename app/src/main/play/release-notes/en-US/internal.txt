@@ -1,0 +1,1 @@
+Dockie 1.3.0: custom stay-awake duration on timer wheels, a clear heads-up the moment Dockie activates, a friendlier two-screen intro, and a fresh bulb-on-its-dock icon.

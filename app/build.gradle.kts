@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.triplet.play)
 }
 
 android {
@@ -12,8 +13,8 @@ android {
         applicationId = "com.dockie.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 3
-        versionName = "1.2.0"
+        versionCode = 4
+        versionName = "1.3.0"
 
         vectorDrawables {
             useSupportLibrary = true
@@ -109,4 +110,19 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material.icons.core)
     implementation(libs.androidx.compose.material.icons.extended)
+}
+
+// Google Play Internal Testing publishing (Gradle Play Publisher).
+// Credentials are NEVER committed: place the Play Console service-account
+// JSON at the repo root as play-service-account.json (gitignored), or set
+// the PLAY_SERVICE_ACCOUNT_JSON secret for CI, then run:
+//   ./gradlew publishReleaseBundle
+// First-time Play signing note: to keep seamless updates for existing
+// sideloaded installs, choose "Use existing app signing key" in
+// Play Console > App integrity and provide this project's upload key.
+play {
+    serviceAccountCredentials.set(rootProject.file("play-service-account.json"))
+    track.set("internal")
+    releaseStatus.set(com.github.triplet.gradle.androidpublisher.ReleaseStatus.COMPLETED)
+    defaultToAppBundles.set(true)
 }

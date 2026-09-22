@@ -30,7 +30,7 @@ import com.dockie.app.power.AwakeFormat
 import com.dockie.app.power.PermissionManager
 import com.dockie.app.ui.MainViewModel
 import com.dockie.app.ui.screens.MainScreen
-import com.dockie.app.ui.screens.OnboardingScreen
+import com.dockie.app.ui.screens.OnboardingFlow
 import com.dockie.app.ui.screens.PermissionScreen
 import com.dockie.app.ui.screens.SettingsScreen
 import com.dockie.app.ui.theme.DockieTheme
@@ -111,8 +111,8 @@ class MainActivity : ComponentActivity() {
                                 onBack = { showSettings = false },
                                 onRefreshAdvanced = viewModel::refreshAdvanced,
                             )
-                            "onboarding" -> OnboardingScreen(
-                                onGetStarted = {
+                            "onboarding" -> OnboardingFlow(
+                                onFinish = {
                                     viewModel.completeOnboarding()
                                     if (!PermissionManager.hasWriteSettings(this@MainActivity)) {
                                         showPermissionExplainer = true

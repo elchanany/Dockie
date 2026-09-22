@@ -18,8 +18,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Bedtime
-import androidx.compose.material.icons.outlined.Bolt
-import androidx.compose.material.icons.outlined.ElectricalServices
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -38,9 +36,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.dockie.app.R
 import com.dockie.app.model.AppState
 import com.dockie.app.ui.theme.DarkGlow
 import com.dockie.app.ui.theme.LightGlow
@@ -70,16 +70,16 @@ fun DockieControl(
     val isOff = appState is AppState.Disabled
 
     val (title, subtitle, icon) = when (appState) {
-        is AppState.Disabled -> Triple("Dockie is off", "Tap to enable", Icons.Outlined.Bedtime)
-        is AppState.Monitoring -> Triple("Ready", "Waiting for your dock", Icons.Outlined.ElectricalServices)
+        is AppState.Disabled -> Triple("Dockie is off", "Tap to enable", ControlGlyph.Vector(Icons.Outlined.Bedtime))
+        is AppState.Monitoring -> Triple("Ready", "Waiting for your dock", ControlGlyph.Bulb(lit = false))
         is AppState.Docked -> when {
-            appState.paused -> Triple("Paused", "Lift and re-dock to resume", Icons.Outlined.Bedtime)
-            appState.timedOut -> Triple("Time's up", "Lift and re-dock for more", Icons.Outlined.Bedtime)
-            else -> Triple("Docked", "Screen will stay awake", Icons.Outlined.Bolt)
+            appState.paused -> Triple("Paused", "Lift and re-dock to resume", ControlGlyph.Vector(Icons.Outlined.Bedtime))
+            appState.timedOut -> Triple("Time's up", "Lift and re-dock for more", ControlGlyph.Vector(Icons.Outlined.Bedtime))
+            else -> Triple("Docked", "Screen will stay awake", ControlGlyph.Bulb(lit = true))
         }
-        is AppState.PermissionRequired -> Triple("One quick setup", "Allow Dockie to control screen timeout", Icons.Outlined.Settings)
-        is AppState.Onboarding -> Triple("Dockie", "Stay awake while docked", Icons.Outlined.ElectricalServices)
-        is AppState.Error -> Triple("Something paused", (appState as AppState.Error).message, Icons.Outlined.Bedtime)
+        is AppState.PermissionRequired -> Triple("One quick setup", "Allow Dockie to control screen timeout", ControlGlyph.Vector(Icons.Outlined.Settings))
+        is AppState.Onboarding -> Triple("Dockie", "Stay awake while docked", ControlGlyph.Bulb(lit = false))
+        is AppState.Error -> Triple("Something paused", (appState as AppState.Error).message, ControlGlyph.Vector(Icons.Outlined.Bedtime))
     }
 
     // Subtle breathing while monitoring.
@@ -181,16 +181,32 @@ fun DockieControl(
 }
 
 @Composable
-private fun ControlIcon(icon: ImageVector, active: Boolean, dimmed: Boolean) {
+private fun ControlIcon(icon: ControlGlyph, active: Boolean, dimmed: Boolean) {
     val tint = when {
         active -> MaterialTheme.colorScheme.primary
         dimmed -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
         else -> MaterialTheme.colorScheme.onSurface
     }
-    Icon(
-        imageVector = icon,
-        contentDescription = null,
-        modifier = Modifier.size(52.dp),
-        tint = tint,
-    )
+    when (icon) {
+        is ControlGlyph.Vector -> Icon(
+            imageVector = icon.value,
+            contentDescription = null,
+            modifier = Modifier.size(52.dp),
+            tint = tint,
+        )
+        is ControlGlyph.Bulb -> Icon(
+            painter = painterResource(
+                id = if (icon.lit) R.drawable.ic_bulb_filled else R.drawable.ic_bulb_outline,
+            ),
+            contentDescription = null,
+            modifier = Modifier.size(56.dp),
+            tint = tint,
+        )
+    }
+}
+
+/** Centerpiece glyph: Dockie's own bulb for live states, plain icons otherwise. */
+private sealed interface ControlGlyph {
+    data class Vector(val value: ImageVector) : ControlGlyph
+    data class Bulb(val lit: Boolean) : ControlGlyph
 }

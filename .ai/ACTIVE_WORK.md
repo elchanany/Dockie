@@ -2,5 +2,6 @@
 
 - **Task:** Google Play closed-test readiness
 - **Branch:** main
-- **Status:** in progress — docs + lint fixes + Play publisher SA created; Console UI steps remain
-- **Continuation:** enroll existing signing key via PEPK; invite SA in Play Console; upload AAB to closed track; collect 12 tester emails
+- **Latest commit:** see `git log -1`
+- **Status:** code/docs/release 1.3.1 shipped; Play Console UI blockers remain
+- **Continuation:** PEPK enroll existing key; invite Play SA; upload AAB to closed track; add 12 tester emails; fill App content from PLAY_CONSOLE_SUBMISSION.md

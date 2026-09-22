@@ -1,0 +1,10 @@
+---
+description: Cross-agent continuity for Dockie
+globs:
+alwaysApply: true
+---
+
+Follow `.ai/WORKFLOW.md`, `.ai/PROJECT_STATE.md`, `.ai/HANDOFF.md`, and `.ai/ACTIVE_WORK.md`.
+Never change `applicationId` (`com.dockie.app`) or replace the existing production signing key.
+Never commit secrets (keystore, play-service-account.json, passwords).
+Use Graphify before broad codebase exploration when `graphify-out/graph.json` exists.

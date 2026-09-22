@@ -189,23 +189,26 @@ Tagging `v*` triggers `.github/workflows/release.yml`, which builds, signs
 `DOCKIE_KEY_ALIAS` / `DOCKIE_KEY_PASSWORD` secrets), and attaches `Dockie.apk`
 to the GitHub Release.
 
-## Google Play (Internal Testing)
+## Google Play (Closed Testing)
 
-A Play publishing setup is ready via Gradle Play Publisher
-(`./gradlew publishReleaseBundle`, track `internal`, AAB by default,
-release notes in `app/src/main/play/release-notes/en-US/internal.txt`).
+Play publishing uses Gradle Play Publisher
+(`./gradlew publishReleaseBundle`, default track `alpha` / closed testing,
+AAB by default, release notes in `app/src/main/play/release-notes/en-US/`).
 Credentials are never committed: put the Play Console service-account JSON at
 the repo root as `play-service-account.json` (gitignored).
 
-Two manual Play Console steps cannot be automated and are required once:
-1. Create the app in Play Console (`com.dockie.app`) and upload the first
-   AAB manually — the Play Developer API cannot register a new app.
-2. In App integrity, choose **"Use existing app signing key"** and provide
-   this project's key, so existing sideloaded installs keep updating
-   seamlessly. (If Google manages a new signing key instead, current APK
-   users would need a fresh install.)
-3. Complete the foreground-service (special use) declaration in App content,
-   and invite the service account under Users and permissions.
+Override track when needed: `./gradlew publishReleaseBundle -PplayTrack=internal`.
+
+See also: `SIGNING_MIGRATION.md`, `PLAY_CONSOLE_SUBMISSION.md`,
+`CLOSED_TEST_PLAN.md`, `TESTERS.md`.
+
+Manual Play Console steps that cannot be fully automated:
+1. Enroll the **existing** Dockie signing key with Play App Signing (PEPK) —
+   do **not** let Google generate a mismatched key (see `SIGNING_MIGRATION.md`).
+2. Upload the first AAB to Closed testing if the API still rejects an empty app.
+3. Invite the publisher service account under Users and permissions.
+4. Complete App content / Data safety using `PLAY_CONSOLE_SUBMISSION.md`.
+5. Add ≥12 opted-in testers for 14 continuous days.
 
 ## Project structure
 

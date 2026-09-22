@@ -2,8 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Lets Dockie temporarily extend the screen timeout while docked. -->
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- Lets Dockie temporarily extend the screen timeout while docked.
+         Granted only after the user opts in via ACTION_MANAGE_WRITE_SETTINGS
+         (Settings.System.canWrite). Not a silent system privilege. -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
     <!-- Restart monitoring after reboot when the user had Dockie enabled. -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <!-- Foreground service that observes wireless-charging state. -->

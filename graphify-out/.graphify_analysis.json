@@ -1,0 +1,316 @@
+{
+  "communities": {
+    "0": [
+      "androidviewmodel",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel_advancedinfo",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel_dockieflags",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel_formattimeout",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel_mainviewmodel",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel_mainviewmodel_completeonboarding",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel_mainviewmodel_onresume",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel_mainviewmodel_refreshadvanced",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel_mainviewmodel_refreshpower",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel_mainviewmodel_setenabled",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel_mainviewmodel_setstartafterrestart",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel_mainviewmodel_settheme",
+      "app_src_main_java_com_dockie_app_ui_mainviewmodel_powerinfo",
+      "app_src_main_java_com_dockie_app_ui_screens_settingsscreen",
+      "app_src_main_java_com_dockie_app_ui_screens_settingsscreen_kt_modifier",
+      "app_src_main_java_com_dockie_app_ui_screens_settingsscreen_section",
+      "app_src_main_java_com_dockie_app_ui_screens_settingsscreen_settingsrow",
+      "app_src_main_java_com_dockie_app_ui_screens_settingsscreen_settingsscreen",
+      "job",
+      "stateflow"
+    ],
+    "1": [
+      "app_src_main_java_com_dockie_app_model_appstate",
+      "app_src_main_java_com_dockie_app_model_appstate_appstate",
+      "app_src_main_java_com_dockie_app_model_appstate_disabled",
+      "app_src_main_java_com_dockie_app_model_appstate_docked",
+      "app_src_main_java_com_dockie_app_model_appstate_error",
+      "app_src_main_java_com_dockie_app_model_appstate_monitoring",
+      "app_src_main_java_com_dockie_app_model_appstate_onboarding",
+      "app_src_main_java_com_dockie_app_model_appstate_permissionrequired",
+      "app_src_main_java_com_dockie_app_ui_components_dockiecontrol",
+      "app_src_main_java_com_dockie_app_ui_components_dockiecontrol_controlicon",
+      "app_src_main_java_com_dockie_app_ui_components_dockiecontrol_dockiecontrol",
+      "app_src_main_java_com_dockie_app_ui_components_dockiecontrol_kt_modifier",
+      "app_src_main_java_com_dockie_app_ui_components_statuscard",
+      "app_src_main_java_com_dockie_app_ui_components_statuscard_kt_modifier",
+      "app_src_main_java_com_dockie_app_ui_components_statuscard_statuscard",
+      "app_src_main_java_com_dockie_app_ui_screens_mainscreen",
+      "app_src_main_java_com_dockie_app_ui_screens_mainscreen_kt_modifier",
+      "app_src_main_java_com_dockie_app_ui_screens_mainscreen_mainscreen",
+      "imagevector"
+    ],
+    "2": [
+      "app_src_main_java_com_dockie_app_data_dockierepository",
+      "app_src_main_java_com_dockie_app_data_dockierepository_dockierepository",
+      "app_src_main_java_com_dockie_app_data_dockierepository_dockierepository_claimoverride",
+      "app_src_main_java_com_dockie_app_data_dockierepository_dockierepository_clearoverride",
+      "app_src_main_java_com_dockie_app_data_dockierepository_dockierepository_getsavedtimeoutnow",
+      "app_src_main_java_com_dockie_app_data_dockierepository_dockierepository_isenablednow",
+      "app_src_main_java_com_dockie_app_data_dockierepository_dockierepository_isfirstrundonenow",
+      "app_src_main_java_com_dockie_app_data_dockierepository_dockierepository_isoverrideactivenow",
+      "app_src_main_java_com_dockie_app_data_dockierepository_dockierepository_setenabled",
+      "app_src_main_java_com_dockie_app_data_dockierepository_dockierepository_setfirstrundone",
+      "app_src_main_java_com_dockie_app_data_dockierepository_dockierepository_setstartafterrestart",
+      "app_src_main_java_com_dockie_app_data_dockierepository_dockierepository_settheme",
+      "app_src_main_java_com_dockie_app_data_dockierepository_keys",
+      "app_src_main_java_com_dockie_app_dockieapp",
+      "app_src_main_java_com_dockie_app_dockieapp_dockieapp",
+      "app_src_main_java_com_dockie_app_dockieapp_dockieapp_oncreate",
+      "application",
+      "flow"
+    ],
+    "3": [
+      "app_src_main_java_com_dockie_app_mainactivity",
+      "app_src_main_java_com_dockie_app_mainactivity_mainactivity",
+      "app_src_main_java_com_dockie_app_mainactivity_mainactivity_oncreate",
+      "app_src_main_java_com_dockie_app_mainactivity_mainactivity_onresume",
+      "app_src_main_java_com_dockie_app_ui_screens_onboardingscreen",
+      "app_src_main_java_com_dockie_app_ui_screens_onboardingscreen_kt_modifier",
+      "app_src_main_java_com_dockie_app_ui_screens_onboardingscreen_onboardingscreen",
+      "app_src_main_java_com_dockie_app_ui_screens_permissionscreen",
+      "app_src_main_java_com_dockie_app_ui_screens_permissionscreen_kt_modifier",
+      "app_src_main_java_com_dockie_app_ui_screens_permissionscreen_permissionscreen",
+      "app_src_main_java_com_dockie_app_ui_theme_theme",
+      "app_src_main_java_com_dockie_app_ui_theme_theme_dockietheme",
+      "bundle",
+      "componentactivity"
+    ],
+    "4": [
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver",
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver_chargingstateobserver",
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver_chargingstateobserver_label",
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver_chargingstateobserver_readsnapshot",
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver_chargingstateobserver_readsnapshotio",
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver_kt_context",
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver_powersnapshot",
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver_powersource",
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver_powersource_none",
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver_powersource_unknown",
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver_powersource_wired_ac",
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver_powersource_wired_usb",
+      "app_src_main_java_com_dockie_app_power_chargingstateobserver_powersource_wireless"
+    ],
+    "5": [
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_disableactionreceiver",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockmonitoringservice",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockmonitoringservice_ensureoverridelocked",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockmonitoringservice_handlepowerintent",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockmonitoringservice_oncreate",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockmonitoringservice_ondestroy",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockmonitoringservice_onstartcommand",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockmonitoringservice_reconcileonstartup",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockmonitoringservice_refreshnotification",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockmonitoringservice_restorelocked",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockmonitoringservice_startforegroundquietly",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_kt_broadcastreceiver",
+      "service"
+    ],
+    "6": [
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_disableactionreceiver_onreceive",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockcontroller",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockcontroller_awaitdisablelocked",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockcontroller_disableeverywhere",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockcontroller_setenabled",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockmonitoringservice_onbind",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_kt_context",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_kt_intent",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_start",
+      "app_src_main_java_com_dockie_app_service_dockmonitoringservice_stop",
+      "ibinder"
+    ],
+    "7": [
+      "app_src_main_java_com_dockie_app_power_screentimeoutcontroller",
+      "app_src_main_java_com_dockie_app_power_screentimeoutcontroller_kt_context",
+      "app_src_main_java_com_dockie_app_power_screentimeoutcontroller_screentimeoutcontroller",
+      "app_src_main_java_com_dockie_app_power_screentimeoutcontroller_screentimeoutcontroller_applydockedoverride",
+      "app_src_main_java_com_dockie_app_power_screentimeoutcontroller_screentimeoutcontroller_canwrite",
+      "app_src_main_java_com_dockie_app_power_screentimeoutcontroller_screentimeoutcontroller_readcurrenttimeoutms",
+      "app_src_main_java_com_dockie_app_power_screentimeoutcontroller_screentimeoutcontroller_restoretimeout",
+      "app_src_main_java_com_dockie_app_power_screentimeoutcontroller_screentimeoutcontroller_writetimeoutms",
+      "contentresolver"
+    ],
+    "8": [
+      "app_src_main_java_com_dockie_app_notify_notificationcontroller",
+      "app_src_main_java_com_dockie_app_notify_notificationcontroller_kt_context",
+      "app_src_main_java_com_dockie_app_notify_notificationcontroller_notificationcontroller",
+      "app_src_main_java_com_dockie_app_notify_notificationcontroller_notificationcontroller_build",
+      "app_src_main_java_com_dockie_app_notify_notificationcontroller_notificationcontroller_ensurechannel",
+      "notification"
+    ],
+    "9": [
+      "app_src_main_java_com_dockie_app_power_permissionmanager",
+      "app_src_main_java_com_dockie_app_power_permissionmanager_kt_context",
+      "app_src_main_java_com_dockie_app_power_permissionmanager_kt_intent",
+      "app_src_main_java_com_dockie_app_power_permissionmanager_permissionmanager",
+      "app_src_main_java_com_dockie_app_power_permissionmanager_permissionmanager_haswritesettings",
+      "app_src_main_java_com_dockie_app_power_permissionmanager_permissionmanager_writesettingsintent"
+    ],
+    "10": [
+      "app_src_main_java_com_dockie_app_receiver_bootreceiver",
+      "app_src_main_java_com_dockie_app_receiver_bootreceiver_bootreceiver",
+      "app_src_main_java_com_dockie_app_receiver_bootreceiver_bootreceiver_onreceive",
+      "app_src_main_java_com_dockie_app_receiver_bootreceiver_kt_broadcastreceiver",
+      "app_src_main_java_com_dockie_app_receiver_bootreceiver_kt_context",
+      "app_src_main_java_com_dockie_app_receiver_bootreceiver_kt_intent"
+    ],
+    "11": [
+      "gradlew",
+      "gradlew__entry",
+      "gradlew_die",
+      "gradlew_warn"
+    ],
+    "12": [
+      "app_build_gradle"
+    ],
+    "13": [
+      "app_src_main_java_com_dockie_app_ui_theme_color"
+    ],
+    "14": [
+      "app_src_main_java_com_dockie_app_ui_theme_type"
+    ],
+    "15": [
+      "build_gradle"
+    ],
+    "16": [
+      "settings_gradle"
+    ]
+  },
+  "cohesion": {
+    "0": 0.12857142857142856,
+    "1": 0.12280701754385964,
+    "2": 0.11764705882352941,
+    "3": 0.14285714285714285,
+    "4": 0.21794871794871795,
+    "5": 0.2692307692307692,
+    "6": 0.3333333333333333,
+    "7": 0.3888888888888889,
+    "8": 0.4666666666666667,
+    "9": 0.4,
+    "10": 0.3333333333333333,
+    "11": 0.8333333333333334,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_src_main_java_com_dockie_app_data_dockierepository_dockierepository",
+      "label": "DockieRepository",
+      "degree": 17
+    },
+    {
+      "id": "app_src_main_java_com_dockie_app_service_dockmonitoringservice_dockmonitoringservice",
+      "label": "DockMonitoringService",
+      "degree": 14
+    },
+    {
+      "id": "app_src_main_java_com_dockie_app_ui_mainviewmodel_mainviewmodel",
+      "label": "MainViewModel",
+      "degree": 14
+    },
+    {
+      "id": "app_src_main_java_com_dockie_app_model_appstate_appstate",
+      "label": "AppState",
+      "degree": 11
+    },
+    {
+      "id": "app_src_main_java_com_dockie_app_power_chargingstateobserver_powersource",
+      "label": "PowerSource",
+      "degree": 7
+    },
+    {
+      "id": "app_src_main_java_com_dockie_app_power_screentimeoutcontroller_screentimeoutcontroller",
+      "label": "ScreenTimeoutController",
+      "degree": 6
+    },
+    {
+      "id": "app_src_main_java_com_dockie_app_ui_screens_mainscreen_mainscreen",
+      "label": "MainScreen()",
+      "degree": 6
+    },
+    {
+      "id": "app_src_main_java_com_dockie_app_ui_screens_settingsscreen_settingsscreen",
+      "label": "SettingsScreen()",
+      "degree": 6
+    },
+    {
+      "id": "app_src_main_java_com_dockie_app_mainactivity_mainactivity",
+      "label": "MainActivity",
+      "degree": 5
+    },
+    {
+      "id": "app_src_main_java_com_dockie_app_ui_components_dockiecontrol_dockiecontrol",
+      "label": "DockieControl()",
+      "degree": 5
+    }
+  ],
+  "surprises": [
+    {
+      "source": "MainActivity",
+      "target": "MainViewModel",
+      "source_files": [
+        "app/src/main/java/com/dockie/app/MainActivity.kt",
+        "app/src/main/java/com/dockie/app/ui/MainViewModel.kt"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "DockMonitoringService",
+      "target": "DockieRepository",
+      "source_files": [
+        "app/src/main/java/com/dockie/app/service/DockMonitoringService.kt",
+        "app/src/main/java/com/dockie/app/data/DockieRepository.kt"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "MainViewModel",
+      "target": "AppState",
+      "source_files": [
+        "app/src/main/java/com/dockie/app/ui/MainViewModel.kt",
+        "app/src/main/java/com/dockie/app/model/AppState.kt"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "MainScreen()",
+      "target": "DockieControl()",
+      "source_files": [
+        "app/src/main/java/com/dockie/app/ui/screens/MainScreen.kt",
+        "app/src/main/java/com/dockie/app/ui/components/DockieControl.kt"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "MainScreen()",
+      "target": "StatusCard()",
+      "source_files": [
+        "app/src/main/java/com/dockie/app/ui/screens/MainScreen.kt",
+        "app/src/main/java/com/dockie/app/ui/components/StatusCard.kt"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

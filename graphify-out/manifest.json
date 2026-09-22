@@ -1,0 +1,212 @@
+{
+  "app/build.gradle.kts": {
+    "mtime": 1790111508.7078497,
+    "ast_hash": "efc63412fa6edba1cd5b7cf433034ef6",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/DockieApp.kt": {
+    "mtime": 1790021888.356503,
+    "ast_hash": "2dd767f03c53f5dcd26de6db38e12bd3",
+    "semantic_hash": "2dd767f03c53f5dcd26de6db38e12bd3"
+  },
+  "app/src/main/java/com/dockie/app/MainActivity.kt": {
+    "mtime": 1790034535.0116413,
+    "ast_hash": "b9104d99bd1df2a801abd2622b3d8ddf",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/data/DockieRepository.kt": {
+    "mtime": 1790026742.9994006,
+    "ast_hash": "fe88994ea6bff38208837566cb9777a9",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/model/AppState.kt": {
+    "mtime": 1790029794.5468967,
+    "ast_hash": "74735dd643229dbe606e20bda825fd51",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/notify/NotificationController.kt": {
+    "mtime": 1790034418.7142851,
+    "ast_hash": "bf1d0d88f6edfe3aa4d6361a8f0f1f65",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/power/ChargingStateObserver.kt": {
+    "mtime": 1790021888.367482,
+    "ast_hash": "32d5ecf7eead7c14902dd780db595644",
+    "semantic_hash": "32d5ecf7eead7c14902dd780db595644"
+  },
+  "app/src/main/java/com/dockie/app/power/PermissionManager.kt": {
+    "mtime": 1790021888.3724792,
+    "ast_hash": "5dbeb32ce6e946af91b27af45f1034e1",
+    "semantic_hash": "5dbeb32ce6e946af91b27af45f1034e1"
+  },
+  "app/src/main/java/com/dockie/app/power/ScreenTimeoutController.kt": {
+    "mtime": 1790021888.367482,
+    "ast_hash": "92181deef085ab894f9dc78a7d1170d3",
+    "semantic_hash": "92181deef085ab894f9dc78a7d1170d3"
+  },
+  "app/src/main/java/com/dockie/app/receiver/BootReceiver.kt": {
+    "mtime": 1790021916.4273622,
+    "ast_hash": "fcd8b0339bc260d19e11ba8fb0c5958e",
+    "semantic_hash": "fcd8b0339bc260d19e11ba8fb0c5958e"
+  },
+  "app/src/main/java/com/dockie/app/service/DockMonitoringService.kt": {
+    "mtime": 1790029779.3959916,
+    "ast_hash": "31dc42170593c41d8e7547ca8a939e70",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/ui/MainViewModel.kt": {
+    "mtime": 1790029794.5268505,
+    "ast_hash": "066c22f5dcf12cf06e50e325072a4566",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/ui/components/DockieControl.kt": {
+    "mtime": 1790075469.3371532,
+    "ast_hash": "f0776d07b77c77e7a0979bf1f7c7963e",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/ui/components/StatusCard.kt": {
+    "mtime": 1790029803.6196465,
+    "ast_hash": "366dc7b37516b6b02eb391fe589e7709",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/ui/screens/MainScreen.kt": {
+    "mtime": 1790111485.6259854,
+    "ast_hash": "c01abc12fede6506f18637fddbb6f020",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/ui/screens/PermissionScreen.kt": {
+    "mtime": 1790021994.8132446,
+    "ast_hash": "c55166f85894d27d9c06f4e7699ff0a6",
+    "semantic_hash": "c55166f85894d27d9c06f4e7699ff0a6"
+  },
+  "app/src/main/java/com/dockie/app/ui/screens/SettingsScreen.kt": {
+    "mtime": 1790034482.0878272,
+    "ast_hash": "a24c71667571cb3e552933f0ad7d0df5",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/ui/theme/Color.kt": {
+    "mtime": 1790021955.352486,
+    "ast_hash": "2d45b321739ef3592c235a7d85ff4afe",
+    "semantic_hash": "2d45b321739ef3592c235a7d85ff4afe"
+  },
+  "app/src/main/java/com/dockie/app/ui/theme/Theme.kt": {
+    "mtime": 1790021955.357479,
+    "ast_hash": "cf505e45e19e13c474cd2d2d94af864c",
+    "semantic_hash": "cf505e45e19e13c474cd2d2d94af864c"
+  },
+  "app/src/main/java/com/dockie/app/ui/theme/Type.kt": {
+    "mtime": 1790021955.357479,
+    "ast_hash": "0dc828cb9c561bdef9ab721cb63285e9",
+    "semantic_hash": "0dc828cb9c561bdef9ab721cb63285e9"
+  },
+  "build.gradle.kts": {
+    "mtime": 1790021861.6459196,
+    "ast_hash": "0d7586f63bb33a6584f40641048a1572",
+    "semantic_hash": "0d7586f63bb33a6584f40641048a1572"
+  },
+  "gradlew": {
+    "mtime": 1790022482.6310925,
+    "ast_hash": "1db6d150e9a9442ca929c1fa8b2fd25e",
+    "semantic_hash": "1db6d150e9a9442ca929c1fa8b2fd25e"
+  },
+  "settings.gradle.kts": {
+    "mtime": 1790021861.5946975,
+    "ast_hash": "e3c01d3c836bcd8b328838a1b2422ef9",
+    "semantic_hash": "e3c01d3c836bcd8b328838a1b2422ef9"
+  },
+  ".github/workflows/release.yml": {
+    "mtime": 1790023418.5346918,
+    "ast_hash": "8f949404d6981d992794dd205e88e070",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1790111996.8054187,
+    "ast_hash": "40f8a4caec81e8a29838b585aa2acd72",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/power/AwakeFormat.kt": {
+    "mtime": 1790026727.4672968,
+    "ast_hash": "b2718a178943855753cd9498bc411774",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/dockie/app/ui/screens/OnboardingFlow.kt": {
+    "mtime": 1790034526.9023638,
+    "ast_hash": "07becd01366bc181dff8f29552d37855",
+    "semantic_hash": ""
+  },
+  "app/src/main/play/release-notes/en-US/internal.txt": {
+    "mtime": 1790111552.899434,
+    "ast_hash": "a40a5f5a9c1bb7434da6f6d635bafb13",
+    "semantic_hash": ""
+  },
+  ".ai/ACTIVE_WORK.md": {
+    "mtime": 1790111949.1216252,
+    "ast_hash": "3f6fd63587352e3f4512ba7000e2c8c5",
+    "semantic_hash": ""
+  },
+  ".ai/DECISIONS.md": {
+    "mtime": 1790111928.3002474,
+    "ast_hash": "525536500e8b6a7af751372705a71cc2",
+    "semantic_hash": ""
+  },
+  ".ai/HANDOFF.md": {
+    "mtime": 1790112071.9171445,
+    "ast_hash": "02380811ba086abbacf1f0b2233b344b",
+    "semantic_hash": ""
+  },
+  ".ai/PROJECT_STATE.md": {
+    "mtime": 1790111928.3002474,
+    "ast_hash": "c047cb51bb96e19d2c10faec9fb2d7f4",
+    "semantic_hash": ""
+  },
+  ".ai/WORKFLOW.md": {
+    "mtime": 1790111928.3022501,
+    "ast_hash": "2550912bc8bb780a92b9007026988643",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1790111949.1216252,
+    "ast_hash": "73aab5a3ab9bbfd3c6e582ca00f2eb82",
+    "semantic_hash": ""
+  },
+  "CLOSED_TEST_PLAN.md": {
+    "mtime": 1790111645.2989886,
+    "ast_hash": "a6148d7c4144e850c47f1985986101b0",
+    "semantic_hash": ""
+  },
+  "GEMINI_IMAGE_REQUESTS.md": {
+    "mtime": 1790111668.711015,
+    "ast_hash": "e9a8d5c72eea69f42b5c6cc5d17c1b72",
+    "semantic_hash": ""
+  },
+  "PLAY_CONSOLE_SUBMISSION.md": {
+    "mtime": 1790111636.0286167,
+    "ast_hash": "34da523e458d3c004e25547614e34e4c",
+    "semantic_hash": ""
+  },
+  "PLAY_FGS_VIDEO_SCRIPT.md": {
+    "mtime": 1790111670.990526,
+    "ast_hash": "069c8d21fbbad5ecce5045f201e99e96",
+    "semantic_hash": ""
+  },
+  "SIGNING_MIGRATION.md": {
+    "mtime": 1790111561.6476083,
+    "ast_hash": "fc998877ac1fc7091ed1c3bc08737572",
+    "semantic_hash": ""
+  },
+  "TESTERS.md": {
+    "mtime": 1790111658.9405384,
+    "ast_hash": "b0c1c3560f58693e6afadf3490f41c1c",
+    "semantic_hash": ""
+  },
+  "app/src/main/play/release-notes/en-US/alpha.txt": {
+    "mtime": 1790111535.033084,
+    "ast_hash": "a40a5f5a9c1bb7434da6f6d635bafb13",
+    "semantic_hash": ""
+  },
+  "play-store-assets/icon-512.png": {
+    "mtime": 1790111560.7687192,
+    "ast_hash": "0225eb4bc04b7c0427959687b697e8dc",
+    "semantic_hash": ""
+  }
+}

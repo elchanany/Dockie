@@ -136,12 +136,12 @@ fun MainScreen(
             Spacer(Modifier.height(28.dp))
 
             Crossfade(
-                targetState = appState::class.simpleName,
+                targetState = appState,
                 animationSpec = tween(300),
                 label = "state",
-            ) {
+            ) { state ->
                 DockieControl(
-                    appState = appState,
+                    appState = state,
                     onToggle = onToggle,
                     onRequestPermission = onRequestPermission,
                 )

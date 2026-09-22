@@ -1,16 +1,16 @@
 # Graph Report - Dockie  (2026-09-23)
 
 ## Corpus Check
-- 38 files · ~17,416 words
+- 39 files · ~17,581 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 349 nodes · 416 edges · 41 communities (33 shown, 8 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.8)
+- 351 nodes · 414 edges · 42 communities (33 shown, 9 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `11442833`
+- Built from commit: `7af84c42`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -50,6 +50,7 @@
 - ACTIVE_WORK.md
 - PROJECT_STATE.md
 - WORKFLOW.md
+- Modifier
 
 ## God Nodes (most connected - your core abstractions)
 1. `DockieRepository` - 30 edges
@@ -58,7 +59,7 @@
 4. `Dockie` - 17 edges
 5. `Play Console submission answers (Dockie)` - 16 edges
 6. `What You Must Do When Invoked` - 12 edges
-7. `AppState` - 11 edges
+7. `AppState` - 10 edges
 8. `/graphify` - 10 edges
 9. `NotificationController` - 9 edges
 10. `SettingsScreen()` - 8 edges
@@ -70,31 +71,31 @@
   app/src/main/java/com/dockie/app/service/DockMonitoringService.kt → app/src/main/java/com/dockie/app/data/DockieRepository.kt
 - `MainViewModel` --references--> `AppState`  [EXTRACTED]
   app/src/main/java/com/dockie/app/ui/MainViewModel.kt → app/src/main/java/com/dockie/app/model/AppState.kt
-- `MainScreen()` --calls--> `DockieControl()`  [INFERRED]
-  app/src/main/java/com/dockie/app/ui/screens/MainScreen.kt → app/src/main/java/com/dockie/app/ui/components/DockieControl.kt
-- `MainScreen()` --calls--> `StatusCard()`  [INFERRED]
-  app/src/main/java/com/dockie/app/ui/screens/MainScreen.kt → app/src/main/java/com/dockie/app/ui/components/StatusCard.kt
+- `DockieApp` --references--> `DockieRepository`  [EXTRACTED]
+  app/src/main/java/com/dockie/app/DockieApp.kt → app/src/main/java/com/dockie/app/data/DockieRepository.kt
+- `DockieControl()` --references--> `AppState`  [EXTRACTED]
+  app/src/main/java/com/dockie/app/ui/components/DockieControl.kt → app/src/main/java/com/dockie/app/model/AppState.kt
 
 ## Import Cycles
 - None detected.
 
-## Communities (41 total, 8 thin omitted)
+## Communities (42 total, 9 thin omitted)
 
 ### Community 0 - "MainViewModel"
 Cohesion: 0.10
 Nodes (15): AndroidViewModel, AdvancedInfo, DockieFlags, formatTimeout(), Job, MainViewModel, PowerInfo, CustomDurationDialog() (+7 more)
 
 ### Community 1 - "AppState"
-Cohesion: 0.12
-Nodes (17): AppState, Disabled, Docked, Error, Monitoring, Onboarding, PermissionRequired, Bulb (+9 more)
+Cohesion: 0.14
+Nodes (15): AppState, Disabled, Docked, Error, Monitoring, Onboarding, PermissionRequired, Bulb (+7 more)
 
 ### Community 2 - "DockieRepository"
 Cohesion: 0.07
 Nodes (5): DockieRepository, Keys, DockieApp, Application, Flow
 
 ### Community 3 - ".onCreate"
-Cohesion: 0.15
-Nodes (11): MainActivity, DockArt(), DotsRow(), Modifier, OnboardingFlow(), RestoreArt(), Modifier, PermissionScreen() (+3 more)
+Cohesion: 0.12
+Nodes (14): MainActivity, MainScreen(), DockArt(), DotsRow(), Modifier, OnboardingFlow(), RestoreArt(), Modifier (+6 more)
 
 ### Community 4 - "PowerSource"
 Cohesion: 0.22
@@ -189,24 +190,24 @@ Cohesion: 0.50
 Nodes (3): 1) Feature graphic, 2) Optional polished 512×512 store icon (only if upgrading), Gemini image requests — Dockie Play graphics
 
 ## Knowledge Gaps
-- **123 isolated node(s):** `Keys`, `Onboarding`, `PermissionRequired`, `Disabled`, `Monitoring` (+118 more)
+- **123 isolated node(s):** `Active work`, `D1 — Wireless-only trigger`, `D2 — Timeout ownership model`, `D3 — Foreground service type`, `D4 — Signing continuity` (+118 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `DockMonitoringService` connect `DockMonitoringService` to `DockieRepository`, `.awaitDisableLocked`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **Why does `DockieRepository` connect `DockieRepository` to `DockMonitoringService`, `.awaitDisableLocked`?**
   _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **Why does `MainViewModel` connect `MainViewModel` to `AppState`, `.onCreate`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **What connects `Keys`, `Onboarding`, `PermissionRequired` to the rest of the system?**
+  _High betweenness centrality (0.027) - this node is a cross-community bridge._
+- **What connects `Active work`, `D1 — Wireless-only trigger`, `D2 — Timeout ownership model` to the rest of the system?**
   _123 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `MainViewModel` be split into smaller, more focused modules?**
   _Cohesion score 0.0989247311827957 - nodes in this community are weakly interconnected._
 - **Should `AppState` be split into smaller, more focused modules?**
-  _Cohesion score 0.12380952380952381 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13725490196078433 - nodes in this community are weakly interconnected._
 - **Should `DockieRepository` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._

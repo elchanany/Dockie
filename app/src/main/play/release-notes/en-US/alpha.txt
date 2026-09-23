@@ -1,1 +1,1 @@
-Dockie 1.3.1: Play Console readiness — lint-safe splash themes, closed-testing publish track, and documentation for signing migration and tester onboarding.
+Dockie 1.4.0: stay-awake-while-docked with timed sessions, live countdown, and quiet notifications. Same experience as internal testing.

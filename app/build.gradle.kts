@@ -7,13 +7,13 @@ plugins {
 
 android {
     namespace = "com.dockie.app"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.dockie.app"
         minSdk = 29
-        targetSdk = 35
-        versionCode = 6
+        targetSdk = 36
+        versionCode = 7
         versionName = "1.4.0"
 
         vectorDrawables {

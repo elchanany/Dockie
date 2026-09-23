@@ -25,7 +25,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
         with: { distribution: temurin, java-version: "17" }
-      - uses: android-actions/setup-android@v3
+      - name: Prepare Android SDK (preinstalled on runner)
+        run: |
+          TOOLS=$(ls -d "$ANDROID_HOME"/cmdline-tools/* | head -n 1)
+          yes | "$TOOLS/bin/sdkmanager" --licenses > /dev/null || true
       - uses: gradle/actions/setup-gradle@v4
       - id: auth
         uses: google-github-actions/auth@v2

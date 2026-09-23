@@ -1,7 +1,7 @@
 # Graph Report - Dockie  (2026-09-23)
 
 ## Corpus Check
-- 42 files · ~18,052 words
+- 42 files · ~18,035 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `63af1ca6`
+- Built from commit: `2b39a579`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -136,7 +136,7 @@ Nodes (24): For /graphify add and --watch, For /graphify query, For the commit h
 
 ### Community 18 - "Dockie"
 Cohesion: 0.11
-Nodes (17): 100% battery behavior, After a manual screen-off, Background-service design, Build instructions, Dockie, Docking alert and status-bar icon, Download, Google Play (Closed Testing) (+9 more)
+Nodes (17): 100% battery behavior, After a manual screen-off, Background-service design, Build instructions, Dockie, Docking alert and status-bar icon, Download, Google Play (EYC shared infrastructure) (+9 more)
 
 ### Community 19 - "graphify reference: extra exports and benchmark"
 Cohesion: 0.22
@@ -195,7 +195,7 @@ Cohesion: 0.50
 Nodes (3): Release, Releasing to Google Play (EYC infrastructure), Rules
 
 ## Knowledge Gaps
-- **126 isolated node(s):** `graphify`, `EYC Digital Play publishing`, `Release`, `Rules`, `Active work` (+121 more)
+- **126 isolated node(s):** `Download`, `What Dockie does`, `How it works`, `Required permission`, `Background-service design` (+121 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -208,7 +208,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.030) - this node is a cross-community bridge._
 - **Why does `MainViewModel` connect `MainViewModel` to `AppState`?**
   _High betweenness centrality (0.026) - this node is a cross-community bridge._
-- **What connects `graphify`, `EYC Digital Play publishing`, `Release` to the rest of the system?**
+- **What connects `Download`, `What Dockie does`, `How it works` to the rest of the system?**
   _126 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `MainViewModel` be split into smaller, more focused modules?**
   _Cohesion score 0.10256410256410256 - nodes in this community are weakly interconnected._

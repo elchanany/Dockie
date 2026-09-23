@@ -4,15 +4,213 @@
   "graph": {},
   "nodes": [
     {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Dockie",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_dockie",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "dockie"
+    },
+    {
+      "label": "Download",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "readme_download",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "download"
+    },
+    {
+      "label": "What Dockie does",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "readme_what_dockie_does",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "what dockie does"
+    },
+    {
+      "label": "How it works",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "readme_how_it_works",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "how it works"
+    },
+    {
+      "label": "Required permission",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "readme_required_permission",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "required permission"
+    },
+    {
+      "label": "Background-service design",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "readme_background_service_design",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "background-service design"
+    },
+    {
+      "label": "Wireless-charging detection",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "readme_wireless_charging_detection",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "wireless-charging detection"
+    },
+    {
+      "label": "100% battery behavior",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "readme_100_battery_behavior",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "100% battery behavior"
+    },
+    {
+      "label": "Stay-awake duration",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "readme_stay_awake_duration",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "stay-awake duration"
+    },
+    {
+      "label": "Docking alert and status-bar icon",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "readme_docking_alert_and_status_bar_icon",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "docking alert and status-bar icon"
+    },
+    {
+      "label": "After a manual screen-off",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L113",
+      "_origin": "ast",
+      "id": "readme_after_a_manual_screen_off",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "after a manual screen-off"
+    },
+    {
+      "label": "State-restoration strategy",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "readme_state_restoration_strategy",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "state-restoration strategy"
+    },
+    {
+      "label": "Known Android limitations",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L142",
+      "_origin": "ast",
+      "id": "readme_known_android_limitations",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "known android limitations"
+    },
+    {
+      "label": "Permissions (all of them)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "readme_permissions_all_of_them",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "permissions (all of them)"
+    },
+    {
+      "label": "Build instructions",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L168",
+      "_origin": "ast",
+      "id": "readme_build_instructions",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "build instructions"
+    },
+    {
+      "label": "Google Play (EYC shared infrastructure)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L192",
+      "_origin": "ast",
+      "id": "readme_google_play_eyc_shared_infrastructure",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "google play (eyc shared infrastructure)"
+    },
+    {
+      "label": "Project structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L211",
+      "_origin": "ast",
+      "id": "readme_project_structure",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "project structure"
+    },
+    {
       "label": "AGENTS.md",
       "file_type": "document",
       "source_file": "AGENTS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agents",
       "community": 26,
       "community_name": "AGENTS.md",
-      "norm_label": "agents.md"
+      "norm_label": "agents.md",
+      "id": "agents"
     },
     {
       "label": "graphify",
@@ -20,10 +218,10 @@
       "source_file": "AGENTS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agents_graphify",
       "community": 26,
       "community_name": "AGENTS.md",
-      "norm_label": "graphify"
+      "norm_label": "graphify",
+      "id": "agents_graphify"
     },
     {
       "label": "EYC Digital Play publishing",
@@ -31,10 +229,10 @@
       "source_file": "AGENTS.md",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "agents_eyc_digital_play_publishing",
       "community": 26,
       "community_name": "AGENTS.md",
-      "norm_label": "eyc digital play publishing"
+      "norm_label": "eyc digital play publishing",
+      "id": "agents_eyc_digital_play_publishing"
     },
     {
       "label": "RELEASING.md",
@@ -42,10 +240,10 @@
       "source_file": "RELEASING.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "releasing",
       "community": 42,
       "community_name": "Releasing to Google Play (EYC infrastructure)",
-      "norm_label": "releasing.md"
+      "norm_label": "releasing.md",
+      "id": "releasing"
     },
     {
       "label": "Releasing to Google Play (EYC infrastructure)",
@@ -53,10 +251,10 @@
       "source_file": "RELEASING.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "releasing_releasing_to_google_play_eyc_infrastructure",
       "community": 42,
       "community_name": "Releasing to Google Play (EYC infrastructure)",
-      "norm_label": "releasing to google play (eyc infrastructure)"
+      "norm_label": "releasing to google play (eyc infrastructure)",
+      "id": "releasing_releasing_to_google_play_eyc_infrastructure"
     },
     {
       "label": "Release",
@@ -64,10 +262,10 @@
       "source_file": "RELEASING.md",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "releasing_release",
       "community": 42,
       "community_name": "Releasing to Google Play (EYC infrastructure)",
-      "norm_label": "release"
+      "norm_label": "release",
+      "id": "releasing_release"
     },
     {
       "label": "Rules",
@@ -75,10 +273,10 @@
       "source_file": "RELEASING.md",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "releasing_rules",
       "community": 42,
       "community_name": "Releasing to Google Play (EYC infrastructure)",
-      "norm_label": "rules"
+      "norm_label": "rules",
+      "id": "releasing_rules"
     },
     {
       "label": "app/build.gradle.kts",
@@ -86,10 +284,10 @@
       "source_file": "app/build.gradle.kts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "app_build_gradle",
       "community": 12,
       "community_name": "app/build.gradle.kts",
-      "norm_label": "app/build.gradle.kts"
+      "norm_label": "app/build.gradle.kts",
+      "id": "app_build_gradle"
     },
     {
       "label": "release-play.ps1",
@@ -97,10 +295,10 @@
       "source_file": "scripts/release-play.ps1",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "scripts_release_play",
       "community": 43,
       "community_name": "release-play.ps1",
-      "norm_label": "release-play.ps1"
+      "norm_label": "release-play.ps1",
+      "id": "scripts_release_play"
     },
     {
       "label": "ACTIVE_WORK.md",
@@ -739,204 +937,6 @@
       "community_name": "Foreground service demo video \u2014 Dockie",
       "norm_label": "manual remaining",
       "id": "play_fgs_video_script_manual_remaining"
-    },
-    {
-      "label": "README.md",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "readme.md",
-      "id": "readme"
-    },
-    {
-      "label": "Dockie",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "dockie",
-      "id": "readme_dockie"
-    },
-    {
-      "label": "Download",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "download",
-      "id": "readme_download"
-    },
-    {
-      "label": "What Dockie does",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L20",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "what dockie does",
-      "id": "readme_what_dockie_does"
-    },
-    {
-      "label": "How it works",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L30",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "how it works",
-      "id": "readme_how_it_works"
-    },
-    {
-      "label": "Required permission",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L50",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "required permission",
-      "id": "readme_required_permission"
-    },
-    {
-      "label": "Background-service design",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L60",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "background-service design",
-      "id": "readme_background_service_design"
-    },
-    {
-      "label": "Wireless-charging detection",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L74",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "wireless-charging detection",
-      "id": "readme_wireless_charging_detection"
-    },
-    {
-      "label": "100% battery behavior",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L79",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "100% battery behavior",
-      "id": "readme_100_battery_behavior"
-    },
-    {
-      "label": "Stay-awake duration",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L86",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "stay-awake duration",
-      "id": "readme_stay_awake_duration"
-    },
-    {
-      "label": "Docking alert and status-bar icon",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L98",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "docking alert and status-bar icon",
-      "id": "readme_docking_alert_and_status_bar_icon"
-    },
-    {
-      "label": "After a manual screen-off",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L113",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "after a manual screen-off",
-      "id": "readme_after_a_manual_screen_off"
-    },
-    {
-      "label": "State-restoration strategy",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L124",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "state-restoration strategy",
-      "id": "readme_state_restoration_strategy"
-    },
-    {
-      "label": "Known Android limitations",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L142",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "known android limitations",
-      "id": "readme_known_android_limitations"
-    },
-    {
-      "label": "Permissions (all of them)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L156",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "permissions (all of them)",
-      "id": "readme_permissions_all_of_them"
-    },
-    {
-      "label": "Build instructions",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L168",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "build instructions",
-      "id": "readme_build_instructions"
-    },
-    {
-      "label": "Google Play (Closed Testing)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L192",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "google play (closed testing)",
-      "id": "readme_google_play_closed_testing"
-    },
-    {
-      "label": "Project structure",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L213",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "project structure",
-      "id": "readme_project_structure"
     },
     {
       "label": "SIGNING_MIGRATION.md",
@@ -3951,13 +3951,200 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "readme_dockie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_100_battery_behavior",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L113",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_after_a_manual_screen_off",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_background_service_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L168",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_build_instructions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_docking_alert_and_status_bar_icon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_download",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L192",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_google_play_eyc_shared_infrastructure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_how_it_works",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L142",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_known_android_limitations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_permissions_all_of_them",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L211",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_project_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_required_permission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_state_restoration_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_stay_awake_duration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_what_dockie_does",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_dockie",
+      "target": "readme_wireless_charging_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "AGENTS.md",
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents",
-      "target": "agents_eyc_digital_play_publishing",
-      "confidence_score": 1.0
+      "target": "agents_eyc_digital_play_publishing"
     },
     {
       "relation": "contains",
@@ -3966,9 +4153,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents",
-      "target": "agents_graphify",
-      "confidence_score": 1.0
+      "target": "agents_graphify"
     },
     {
       "relation": "contains",
@@ -3977,9 +4164,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "releasing",
-      "target": "releasing_releasing_to_google_play_eyc_infrastructure",
-      "confidence_score": 1.0
+      "target": "releasing_releasing_to_google_play_eyc_infrastructure"
     },
     {
       "relation": "contains",
@@ -3988,9 +4175,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "releasing_releasing_to_google_play_eyc_infrastructure",
-      "target": "releasing_release",
-      "confidence_score": 1.0
+      "target": "releasing_release"
     },
     {
       "relation": "contains",
@@ -3999,9 +4186,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "releasing_releasing_to_google_play_eyc_infrastructure",
-      "target": "releasing_rules",
-      "confidence_score": 1.0
+      "target": "releasing_rules"
     },
     {
       "relation": "contains",
@@ -4530,193 +4717,6 @@
       "confidence_score": 1.0,
       "source": "play_fgs_video_script_foreground_service_demo_video_dockie",
       "target": "play_fgs_video_script_what_the_reviewer_must_see"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme",
-      "target": "readme_dockie"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L79",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_100_battery_behavior"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L113",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_after_a_manual_screen_off"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L60",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_background_service_design"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L168",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_build_instructions"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L98",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_docking_alert_and_status_bar_icon"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_download"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L192",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_google_play_closed_testing"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L30",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_how_it_works"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L142",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_known_android_limitations"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L156",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_permissions_all_of_them"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L213",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_project_structure"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L50",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_required_permission"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L124",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_state_restoration_strategy"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L86",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_stay_awake_duration"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_what_dockie_does"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L74",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_dockie",
-      "target": "readme_wireless_charging_detection"
     },
     {
       "relation": "contains",
@@ -8686,5 +8686,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "63af1ca6ccd3453151f65ab212b5f633581f9d6b"
+  "built_at_commit": "2b39a57999ad102831fcc5b7994583a88e96fba9"
 }

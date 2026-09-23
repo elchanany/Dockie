@@ -1,0 +1,7 @@
+{
+  "package": "com.dockie.app",
+  "module": "app",
+  "defaultTrack": "internal",
+  "tracks": { "closed": "alpha" },
+  "notesPath": "app/src/main/play/release-notes/en-US"
+}

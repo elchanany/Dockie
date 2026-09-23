@@ -1,0 +1,40 @@
+name: Play release (EYC)
+
+on:
+  workflow_dispatch:
+    inputs:
+      track:
+        description: Play track
+        required: true
+        default: internal
+        type: choice
+        options: [internal, alpha, production]
+      production_confirm:
+        description: For production, type RELEASE to confirm
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  play:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "17" }
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/1050389162836/locations/global/workloadIdentityPools/eyc-github/providers/github
+          service_account: eyc-play-publisher@dockie-play-publisher.iam.gserviceaccount.com
+      - name: Guard production
+        if: inputs.track == 'production' && inputs.production_confirm != 'RELEASE'
+        run: echo "::error::production requires production_confirm=RELEASE" && exit 1
+      - name: Publish to Play
+        env: { EYC_PLAY_ADC: "true" }
+        run: ./gradlew :app:publishReleaseBundle -Peyc.play.adc=true --track ${{ inputs.track }}

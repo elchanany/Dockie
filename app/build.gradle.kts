@@ -112,17 +112,27 @@ dependencies {
     implementation(libs.androidx.compose.material.icons.extended)
 }
 
-// Google Play publishing (Gradle Play Publisher).
-// Credentials are NEVER committed: place the Play Console service-account
-// JSON at the repo root as play-service-account.json (gitignored), or set
-// PLAY_SERVICE_ACCOUNT_JSON for CI. Default track is closed testing (alpha).
-// Override with -PplayTrack=internal|alpha|beta|production as needed.
-//   ./gradlew publishReleaseBundle
-// First-time Play signing: enroll the EXISTING Dockie signing key via PEPK
-// (see SIGNING_MIGRATION.md) so sideloaded installs stay update-compatible.
+// Google Play publishing (EYC shared infrastructure — see RELEASING.md).
+// Auth: ADC when EYC_PLAY_ADC=true / -Peyc.play.adc=true (local EYC key via
+// GOOGLE_APPLICATION_CREDENTIALS, OIDC in CI). Otherwise an explicit key file
+// via -Peyc.play.keyFile / EYC_PLAY_KEYFILE, else legacy play-service-account.json.
+// Tracks: CLI --track internal|alpha|production (default internal).
+// Play signing is Google-managed for the Play-distributed version (EYC decision:
+// no PEPK upload, no sideload-key migration; old sideload installs uninstall).
 play {
-    serviceAccountCredentials.set(rootProject.file("play-service-account.json"))
-    track.set((project.findProperty("playTrack") as String?) ?: "alpha")
+    val eycAdc = (project.findProperty("eyc.play.adc") as String?) == "true" ||
+        System.getenv("EYC_PLAY_ADC") == "true"
+    if (eycAdc) {
+        useApplicationDefaultCredentials.set(true)
+    } else {
+        val keyFile = (project.findProperty("eyc.play.keyFile") as String?)
+            ?: System.getenv("EYC_PLAY_KEYFILE")
+        serviceAccountCredentials.set(
+            if (!keyFile.isNullOrBlank()) file(keyFile)
+            else rootProject.file("play-service-account.json"),
+        )
+    }
+    track.set("internal")
     releaseStatus.set(com.github.triplet.gradle.androidpublisher.ReleaseStatus.COMPLETED)
     defaultToAppBundles.set(true)
 }

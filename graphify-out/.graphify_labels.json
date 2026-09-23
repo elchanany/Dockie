@@ -2,7 +2,7 @@
   "0": "MainViewModel",
   "1": "AppState",
   "2": "DockieRepository",
-  "3": ".onCreate",
+  "3": "SettingsScreen",
   "4": "PowerSource",
   "5": "DockMonitoringService",
   "6": ".awaitDisableLocked",
@@ -40,5 +40,7 @@
   "38": "PROJECT_STATE.md",
   "39": "WORKFLOW.md",
   "40": "CLAUDE.md",
-  "41": "Modifier"
+  "41": "Modifier",
+  "42": "Releasing to Google Play (EYC infrastructure)",
+  "43": "release-play.ps1"
 }

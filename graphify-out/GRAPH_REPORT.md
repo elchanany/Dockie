@@ -1,16 +1,16 @@
 # Graph Report - Dockie  (2026-09-23)
 
 ## Corpus Check
-- 39 files · ~17,581 words
+- 42 files · ~18,052 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 351 nodes · 414 edges · 42 communities (33 shown, 9 thin omitted)
+- 357 nodes · 418 edges · 44 communities (35 shown, 9 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7af84c42`
+- Built from commit: `63af1ca6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -18,7 +18,7 @@
 - MainViewModel
 - AppState
 - DockieRepository
-- .onCreate
+- SettingsScreen
 - PowerSource
 - DockMonitoringService
 - .awaitDisableLocked
@@ -51,6 +51,7 @@
 - PROJECT_STATE.md
 - WORKFLOW.md
 - Modifier
+- Releasing to Google Play (EYC infrastructure)
 
 ## God Nodes (most connected - your core abstractions)
 1. `DockieRepository` - 30 edges
@@ -65,25 +66,25 @@
 10. `SettingsScreen()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `MainActivity` --references--> `MainViewModel`  [EXTRACTED]
-  app/src/main/java/com/dockie/app/MainActivity.kt → app/src/main/java/com/dockie/app/ui/MainViewModel.kt
 - `DockMonitoringService` --references--> `DockieRepository`  [EXTRACTED]
   app/src/main/java/com/dockie/app/service/DockMonitoringService.kt → app/src/main/java/com/dockie/app/data/DockieRepository.kt
 - `MainViewModel` --references--> `AppState`  [EXTRACTED]
   app/src/main/java/com/dockie/app/ui/MainViewModel.kt → app/src/main/java/com/dockie/app/model/AppState.kt
+- `SettingsScreen()` --references--> `AdvancedInfo`  [EXTRACTED]
+  app/src/main/java/com/dockie/app/ui/screens/SettingsScreen.kt → app/src/main/java/com/dockie/app/ui/MainViewModel.kt
 - `DockieApp` --references--> `DockieRepository`  [EXTRACTED]
   app/src/main/java/com/dockie/app/DockieApp.kt → app/src/main/java/com/dockie/app/data/DockieRepository.kt
-- `DockieControl()` --references--> `AppState`  [EXTRACTED]
-  app/src/main/java/com/dockie/app/ui/components/DockieControl.kt → app/src/main/java/com/dockie/app/model/AppState.kt
+- `MainActivity` --references--> `MainViewModel`  [EXTRACTED]
+  app/src/main/java/com/dockie/app/MainActivity.kt → app/src/main/java/com/dockie/app/ui/MainViewModel.kt
 
 ## Import Cycles
 - None detected.
 
-## Communities (42 total, 9 thin omitted)
+## Communities (44 total, 9 thin omitted)
 
 ### Community 0 - "MainViewModel"
 Cohesion: 0.10
-Nodes (15): AndroidViewModel, AdvancedInfo, DockieFlags, formatTimeout(), Job, MainViewModel, PowerInfo, CustomDurationDialog() (+7 more)
+Nodes (10): AndroidViewModel, MainActivity, AdvancedInfo, DockieFlags, formatTimeout(), Job, MainViewModel, PowerInfo (+2 more)
 
 ### Community 1 - "AppState"
 Cohesion: 0.14
@@ -93,9 +94,9 @@ Nodes (15): AppState, Disabled, Docked, Error, Monitoring, Onboarding, Permissio
 Cohesion: 0.07
 Nodes (5): DockieRepository, Keys, DockieApp, Application, Flow
 
-### Community 3 - ".onCreate"
+### Community 3 - "SettingsScreen"
 Cohesion: 0.12
-Nodes (14): MainActivity, MainScreen(), DockArt(), DotsRow(), Modifier, OnboardingFlow(), RestoreArt(), Modifier (+6 more)
+Nodes (19): MainScreen(), DockArt(), DotsRow(), Modifier, OnboardingFlow(), RestoreArt(), Modifier, PermissionScreen() (+11 more)
 
 ### Community 4 - "PowerSource"
 Cohesion: 0.22
@@ -189,8 +190,12 @@ Nodes (3): Exact next steps, Handoff — Dockie, Verified current state (2026-09
 Cohesion: 0.50
 Nodes (3): 1) Feature graphic, 2) Optional polished 512×512 store icon (only if upgrading), Gemini image requests — Dockie Play graphics
 
+### Community 42 - "Releasing to Google Play (EYC infrastructure)"
+Cohesion: 0.50
+Nodes (3): Release, Releasing to Google Play (EYC infrastructure), Rules
+
 ## Knowledge Gaps
-- **123 isolated node(s):** `Active work`, `D1 — Wireless-only trigger`, `D2 — Timeout ownership model`, `D3 — Foreground service type`, `D4 — Signing continuity` (+118 more)
+- **126 isolated node(s):** `graphify`, `EYC Digital Play publishing`, `Release`, `Rules`, `Active work` (+121 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -198,15 +203,15 @@ Nodes (3): 1) Feature graphic, 2) Optional polished 512×512 store icon (only if
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `DockMonitoringService` connect `DockMonitoringService` to `DockieRepository`, `.awaitDisableLocked`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
 - **Why does `DockieRepository` connect `DockieRepository` to `DockMonitoringService`, `.awaitDisableLocked`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
-- **Why does `MainViewModel` connect `MainViewModel` to `AppState`, `.onCreate`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **What connects `Active work`, `D1 — Wireless-only trigger`, `D2 — Timeout ownership model` to the rest of the system?**
-  _123 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+- **Why does `MainViewModel` connect `MainViewModel` to `AppState`?**
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **What connects `graphify`, `EYC Digital Play publishing`, `Release` to the rest of the system?**
+  _126 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `MainViewModel` be split into smaller, more focused modules?**
-  _Cohesion score 0.0989247311827957 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10256410256410256 - nodes in this community are weakly interconnected._
 - **Should `AppState` be split into smaller, more focused modules?**
   _Cohesion score 0.13725490196078433 - nodes in this community are weakly interconnected._
 - **Should `DockieRepository` be split into smaller, more focused modules?**

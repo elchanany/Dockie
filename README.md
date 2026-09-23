@@ -189,26 +189,24 @@ Tagging `v*` triggers `.github/workflows/release.yml`, which builds, signs
 `DOCKIE_KEY_ALIAS` / `DOCKIE_KEY_PASSWORD` secrets), and attaches `Dockie.apk`
 to the GitHub Release.
 
-## Google Play (Closed Testing)
+## Google Play (EYC shared infrastructure)
 
-Play publishing uses Gradle Play Publisher
-(`./gradlew publishReleaseBundle`, default track `alpha` / closed testing,
-AAB by default, release notes in `app/src/main/play/release-notes/en-US/`).
-Credentials are never committed: put the Play Console service-account JSON at
-the repo root as `play-service-account.json` (gitignored).
+Play releases go through shared **EYC Digital** infrastructure — full flow in
+`RELEASING.md` (local: `scripts/release-play.ps1`, CI: `play-release.yml`
+workflow with GitHub OIDC, no stored Google key).
 
-Override track when needed: `./gradlew publishReleaseBundle -PplayTrack=internal`.
+Current EYC decision (supersedes any older per-app notes): Play App Signing
+stays **Google-managed** for the Play-distributed version. No PEPK upload, no
+sideload-key migration; old sideload installs can be uninstalled.
 
-See also: `SIGNING_MIGRATION.md`, `PLAY_CONSOLE_SUBMISSION.md`,
-`CLOSED_TEST_PLAN.md`, `TESTERS.md`.
+Manual Play Console steps that cannot be automated (one time):
+1. Create the app (`com.dockie.app`) and upload the first AAB manually —
+   the API cannot register a new app.
+2. Invite `eyc-play-publisher@dockie-play-publisher.iam.gserviceaccount.com`
+   under Users and permissions (account-level testing/store rights, no finance).
+3. Complete App content / Data safety using `PLAY_CONSOLE_SUBMISSION.md`.
 
-Manual Play Console steps that cannot be fully automated:
-1. Enroll the **existing** Dockie signing key with Play App Signing (PEPK) —
-   do **not** let Google generate a mismatched key (see `SIGNING_MIGRATION.md`).
-2. Upload the first AAB to Closed testing if the API still rejects an empty app.
-3. Invite the publisher service account under Users and permissions.
-4. Complete App content / Data safety using `PLAY_CONSOLE_SUBMISSION.md`.
-5. Add ≥12 opted-in testers for 14 continuous days.
+See also: `RELEASING.md`, `.eyc/play.json`, `%USERPROFILE%\.eyc\docs\AGENT_GUIDE.md`.
 
 ## Project structure
 

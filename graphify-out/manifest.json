@@ -1,7 +1,7 @@
 {
   "app/build.gradle.kts": {
-    "mtime": 1790111508.7078497,
-    "ast_hash": "efc63412fa6edba1cd5b7cf433034ef6",
+    "mtime": 1790126000.1179314,
+    "ast_hash": "6835d9a2ec917064bf0942d0218b21fc",
     "semantic_hash": ""
   },
   "app/src/main/java/com/dockie/app/DockieApp.kt": {
@@ -140,8 +140,8 @@
     "semantic_hash": ""
   },
   ".ai/ACTIVE_WORK.md": {
-    "mtime": 1790111949.1216252,
-    "ast_hash": "3f6fd63587352e3f4512ba7000e2c8c5",
+    "mtime": 1790112489.2313643,
+    "ast_hash": "997d45870112e559958ab044200df50a",
     "semantic_hash": ""
   },
   ".ai/DECISIONS.md": {
@@ -210,8 +210,28 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1790023954.1616232,
-    "ast_hash": "21ceb6533048be51308e69e7b74a35cf",
+    "mtime": 1790125911.4328234,
+    "ast_hash": "414782dfc996d79c6fb5f18aef001fa5",
+    "semantic_hash": ""
+  },
+  ".eyc/play.json": {
+    "mtime": 1790125911.3783123,
+    "ast_hash": "a7d8f43dd5556b847b3b15eeed7169a0",
+    "semantic_hash": ""
+  },
+  "scripts/release-play.ps1": {
+    "mtime": 1790125911.3881178,
+    "ast_hash": "76fe69db2777bb51389ba2bf7bdc2ef9",
+    "semantic_hash": ""
+  },
+  ".github/workflows/play-release.yml": {
+    "mtime": 1790125911.4071405,
+    "ast_hash": "cae6d9b1dfb8d680d3a9b172d63298b1",
+    "semantic_hash": ""
+  },
+  "RELEASING.md": {
+    "mtime": 1790125911.4141655,
+    "ast_hash": "4e2aef585ca373a2e4145a434b0b8d56",
     "semantic_hash": ""
   }
 }

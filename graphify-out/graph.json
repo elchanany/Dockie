@@ -4,193 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "ACTIVE_WORK.md",
-      "file_type": "document",
-      "source_file": ".ai/ACTIVE_WORK.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ai_active_work",
-      "community": 37,
-      "community_name": "ACTIVE_WORK.md",
-      "norm_label": "active_work.md"
-    },
-    {
-      "label": "Active work",
-      "file_type": "document",
-      "source_file": ".ai/ACTIVE_WORK.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ai_active_work_active_work",
-      "community": 37,
-      "community_name": "ACTIVE_WORK.md",
-      "norm_label": "active work"
-    },
-    {
-      "label": "DECISIONS.md",
-      "file_type": "document",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ai_decisions",
-      "community": 32,
-      "community_name": "Decisions \u2014 Dockie",
-      "norm_label": "decisions.md"
-    },
-    {
-      "label": "Decisions \u2014 Dockie",
-      "file_type": "document",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ai_decisions_decisions_dockie",
-      "community": 32,
-      "community_name": "Decisions \u2014 Dockie",
-      "norm_label": "decisions \u2014 dockie"
-    },
-    {
-      "label": "D1 \u2014 Wireless-only trigger",
-      "file_type": "document",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "ai_decisions_d1_wireless_only_trigger",
-      "community": 32,
-      "community_name": "Decisions \u2014 Dockie",
-      "norm_label": "d1 \u2014 wireless-only trigger"
-    },
-    {
-      "label": "D2 \u2014 Timeout ownership model",
-      "file_type": "document",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "ai_decisions_d2_timeout_ownership_model",
-      "community": 32,
-      "community_name": "Decisions \u2014 Dockie",
-      "norm_label": "d2 \u2014 timeout ownership model"
-    },
-    {
-      "label": "D3 \u2014 Foreground service type",
-      "file_type": "document",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "ai_decisions_d3_foreground_service_type",
-      "community": 32,
-      "community_name": "Decisions \u2014 Dockie",
-      "norm_label": "d3 \u2014 foreground service type"
-    },
-    {
-      "label": "D4 \u2014 Signing continuity",
-      "file_type": "document",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "ai_decisions_d4_signing_continuity",
-      "community": 32,
-      "community_name": "Decisions \u2014 Dockie",
-      "norm_label": "d4 \u2014 signing continuity"
-    },
-    {
-      "label": "D5 \u2014 Privacy",
-      "file_type": "document",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "ai_decisions_d5_privacy",
-      "community": 32,
-      "community_name": "Decisions \u2014 Dockie",
-      "norm_label": "d5 \u2014 privacy"
-    },
-    {
-      "label": "HANDOFF.md",
-      "file_type": "document",
-      "source_file": ".ai/HANDOFF.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ai_handoff",
-      "community": 35,
-      "community_name": "Handoff \u2014 Dockie",
-      "norm_label": "handoff.md"
-    },
-    {
-      "label": "Handoff \u2014 Dockie",
-      "file_type": "document",
-      "source_file": ".ai/HANDOFF.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ai_handoff_handoff_dockie",
-      "community": 35,
-      "community_name": "Handoff \u2014 Dockie",
-      "norm_label": "handoff \u2014 dockie"
-    },
-    {
-      "label": "Verified current state (2026-09-22)",
-      "file_type": "document",
-      "source_file": ".ai/HANDOFF.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "ai_handoff_verified_current_state_2026_09_22",
-      "community": 35,
-      "community_name": "Handoff \u2014 Dockie",
-      "norm_label": "verified current state (2026-09-22)"
-    },
-    {
-      "label": "Exact next steps",
-      "file_type": "document",
-      "source_file": ".ai/HANDOFF.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "ai_handoff_exact_next_steps",
-      "community": 35,
-      "community_name": "Handoff \u2014 Dockie",
-      "norm_label": "exact next steps"
-    },
-    {
-      "label": "PROJECT_STATE.md",
-      "file_type": "document",
-      "source_file": ".ai/PROJECT_STATE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ai_project_state",
-      "community": 38,
-      "community_name": "PROJECT_STATE.md",
-      "norm_label": "project_state.md"
-    },
-    {
-      "label": "Project state \u2014 Dockie",
-      "file_type": "document",
-      "source_file": ".ai/PROJECT_STATE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ai_project_state_project_state_dockie",
-      "community": 38,
-      "community_name": "PROJECT_STATE.md",
-      "norm_label": "project state \u2014 dockie"
-    },
-    {
-      "label": "WORKFLOW.md",
-      "file_type": "document",
-      "source_file": ".ai/WORKFLOW.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ai_workflow",
-      "community": 39,
-      "community_name": "WORKFLOW.md",
-      "norm_label": "workflow.md"
-    },
-    {
-      "label": "Workflow \u2014 Dockie",
-      "file_type": "document",
-      "source_file": ".ai/WORKFLOW.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ai_workflow_workflow_dockie",
-      "community": 39,
-      "community_name": "WORKFLOW.md",
-      "norm_label": "workflow \u2014 dockie"
-    },
-    {
       "label": "AGENTS.md",
       "file_type": "document",
       "source_file": "AGENTS.md",
@@ -213,840 +26,59 @@
       "norm_label": "graphify"
     },
     {
-      "label": "CLAUDE.md",
+      "label": "EYC Digital Play publishing",
       "file_type": "document",
-      "source_file": "CLAUDE.md",
+      "source_file": "AGENTS.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "agents_eyc_digital_play_publishing",
+      "community": 26,
+      "community_name": "AGENTS.md",
+      "norm_label": "eyc digital play publishing"
+    },
+    {
+      "label": "RELEASING.md",
+      "file_type": "document",
+      "source_file": "RELEASING.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "claude",
-      "community": 40,
-      "community_name": "CLAUDE.md",
-      "norm_label": "claude.md"
+      "id": "releasing",
+      "community": 42,
+      "community_name": "Releasing to Google Play (EYC infrastructure)",
+      "norm_label": "releasing.md"
     },
     {
-      "label": "CLAUDE.md",
+      "label": "Releasing to Google Play (EYC infrastructure)",
       "file_type": "document",
-      "source_file": "CLAUDE.md",
+      "source_file": "RELEASING.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "claude_claude_md",
-      "community": 40,
-      "community_name": "CLAUDE.md",
-      "norm_label": "claude.md"
+      "id": "releasing_releasing_to_google_play_eyc_infrastructure",
+      "community": 42,
+      "community_name": "Releasing to Google Play (EYC infrastructure)",
+      "norm_label": "releasing to google play (eyc infrastructure)"
     },
     {
-      "label": "CLOSED_TEST_PLAN.md",
+      "label": "Release",
       "file_type": "document",
-      "source_file": "CLOSED_TEST_PLAN.md",
-      "source_location": "L1",
+      "source_file": "RELEASING.md",
+      "source_location": "L6",
       "_origin": "ast",
-      "id": "closed_test_plan",
-      "community": 34,
-      "community_name": "Closed test plan \u2014 Dockie",
-      "norm_label": "closed_test_plan.md"
+      "id": "releasing_release",
+      "community": 42,
+      "community_name": "Releasing to Google Play (EYC infrastructure)",
+      "norm_label": "release"
     },
     {
-      "label": "Closed test plan \u2014 Dockie",
+      "label": "Rules",
       "file_type": "document",
-      "source_file": "CLOSED_TEST_PLAN.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "closed_test_plan_closed_test_plan_dockie",
-      "community": 34,
-      "community_name": "Closed test plan \u2014 Dockie",
-      "norm_label": "closed test plan \u2014 dockie"
-    },
-    {
-      "label": "Preconditions",
-      "file_type": "document",
-      "source_file": "CLOSED_TEST_PLAN.md",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "closed_test_plan_preconditions",
-      "community": 34,
-      "community_name": "Closed test plan \u2014 Dockie",
-      "norm_label": "preconditions"
-    },
-    {
-      "label": "Test matrix",
-      "file_type": "document",
-      "source_file": "CLOSED_TEST_PLAN.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "closed_test_plan_test_matrix",
-      "community": 34,
-      "community_name": "Closed test plan \u2014 Dockie",
-      "norm_label": "test matrix"
-    },
-    {
-      "label": "Pass criteria for closed-test start",
-      "file_type": "document",
-      "source_file": "CLOSED_TEST_PLAN.md",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "closed_test_plan_pass_criteria_for_closed_test_start",
-      "community": 34,
-      "community_name": "Closed test plan \u2014 Dockie",
-      "norm_label": "pass criteria for closed-test start"
-    },
-    {
-      "label": "Feedback format for testers",
-      "file_type": "document",
-      "source_file": "CLOSED_TEST_PLAN.md",
-      "source_location": "L49",
-      "_origin": "ast",
-      "id": "closed_test_plan_feedback_format_for_testers",
-      "community": 34,
-      "community_name": "Closed test plan \u2014 Dockie",
-      "norm_label": "feedback format for testers"
-    },
-    {
-      "label": "GEMINI_IMAGE_REQUESTS.md",
-      "file_type": "document",
-      "source_file": "GEMINI_IMAGE_REQUESTS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "gemini_image_requests",
-      "community": 36,
-      "community_name": "Gemini image requests \u2014 Dockie Play graphics",
-      "norm_label": "gemini_image_requests.md"
-    },
-    {
-      "label": "Gemini image requests \u2014 Dockie Play graphics",
-      "file_type": "document",
-      "source_file": "GEMINI_IMAGE_REQUESTS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "gemini_image_requests_gemini_image_requests_dockie_play_graphics",
-      "community": 36,
-      "community_name": "Gemini image requests \u2014 Dockie Play graphics",
-      "norm_label": "gemini image requests \u2014 dockie play graphics"
-    },
-    {
-      "label": "1) Feature graphic",
-      "file_type": "document",
-      "source_file": "GEMINI_IMAGE_REQUESTS.md",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "gemini_image_requests_1_feature_graphic",
-      "community": 36,
-      "community_name": "Gemini image requests \u2014 Dockie Play graphics",
-      "norm_label": "1) feature graphic"
-    },
-    {
-      "label": "2) Optional polished 512\u00d7512 store icon (only if upgrading)",
-      "file_type": "document",
-      "source_file": "GEMINI_IMAGE_REQUESTS.md",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "gemini_image_requests_2_optional_polished_512_512_store_icon_only_if_upgrading",
-      "community": 36,
-      "community_name": "Gemini image requests \u2014 Dockie Play graphics",
-      "norm_label": "2) optional polished 512\u00d7512 store icon (only if upgrading)"
-    },
-    {
-      "label": "PLAY_CONSOLE_SUBMISSION.md",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "play_console_submission",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "play_console_submission.md"
-    },
-    {
-      "label": "Play Console submission answers (Dockie)",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "play_console_submission_play_console_submission_answers_dockie",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "play console submission answers (dockie)"
-    },
-    {
-      "label": "App access",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "play_console_submission_app_access",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "app access"
-    },
-    {
-      "label": "Ads",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "play_console_submission_ads",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "ads"
-    },
-    {
-      "label": "Content rating (IARC questionnaire \u2014 expected answers)",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "play_console_submission_content_rating_iarc_questionnaire_expected_answers",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "content rating (iarc questionnaire \u2014 expected answers)"
-    },
-    {
-      "label": "Target audience",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "play_console_submission_target_audience",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "target audience"
-    },
-    {
-      "label": "News app",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L46",
-      "_origin": "ast",
-      "id": "play_console_submission_news_app",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "news app"
-    },
-    {
-      "label": "COVID-19 contact tracing / status apps",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L50",
-      "_origin": "ast",
-      "id": "play_console_submission_covid_19_contact_tracing_status_apps",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "covid-19 contact tracing / status apps"
-    },
-    {
-      "label": "Data safety",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L54",
-      "_origin": "ast",
-      "id": "play_console_submission_data_safety",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "data safety"
-    },
-    {
-      "label": "Overview (verified from code)",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L56",
-      "_origin": "ast",
-      "id": "play_console_submission_overview_verified_from_code",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "overview (verified from code)"
-    },
-    {
-      "label": "Data types",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L64",
-      "_origin": "ast",
-      "id": "play_console_submission_data_types",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "data types"
-    },
-    {
-      "label": "Sensitive permissions used on-device only (not \u201ccollected\u201d for Data safety)",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L70",
-      "_origin": "ast",
-      "id": "play_console_submission_sensitive_permissions_used_on_device_only_not_collected_for_data_safety",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "sensitive permissions used on-device only (not \u201ccollected\u201d for data safety)"
-    },
-    {
-      "label": "Government apps",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L79",
-      "_origin": "ast",
-      "id": "play_console_submission_government_apps",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "government apps"
-    },
-    {
-      "label": "Financial features",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L83",
-      "_origin": "ast",
-      "id": "play_console_submission_financial_features",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "financial features"
-    },
-    {
-      "label": "Health",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L87",
-      "_origin": "ast",
-      "id": "play_console_submission_health",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "health"
-    },
-    {
-      "label": "Privacy policy",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L91",
-      "_origin": "ast",
-      "id": "play_console_submission_privacy_policy",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "privacy policy"
-    },
-    {
-      "label": "Permissions declarations",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L96",
-      "_origin": "ast",
-      "id": "play_console_submission_permissions_declarations",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "permissions declarations"
-    },
-    {
-      "label": "WRITE_SETTINGS / Modify system settings",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L98",
-      "_origin": "ast",
-      "id": "play_console_submission_write_settings_modify_system_settings",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "write_settings / modify system settings"
-    },
-    {
-      "label": "Notifications (`POST_NOTIFICATIONS`)",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L103",
-      "_origin": "ast",
-      "id": "play_console_submission_notifications_post_notifications",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "notifications (`post_notifications`)"
-    },
-    {
-      "label": "Foreground service declaration",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L108",
-      "_origin": "ast",
-      "id": "play_console_submission_foreground_service_declaration",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "foreground service declaration"
-    },
-    {
-      "label": "Other declarations",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L122",
-      "_origin": "ast",
-      "id": "play_console_submission_other_declarations",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "other declarations"
-    },
-    {
-      "label": "Store listing text (en-US) \u2014 ready to paste",
-      "file_type": "document",
-      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
-      "source_location": "L130",
-      "_origin": "ast",
-      "id": "play_console_submission_store_listing_text_en_us_ready_to_paste",
-      "community": 29,
-      "community_name": "Play Console submission answers (Dockie)",
-      "norm_label": "store listing text (en-us) \u2014 ready to paste"
-    },
-    {
-      "label": "PLAY_FGS_VIDEO_SCRIPT.md",
-      "file_type": "document",
-      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "play_fgs_video_script",
-      "community": 33,
-      "community_name": "Foreground service demo video \u2014 Dockie",
-      "norm_label": "play_fgs_video_script.md"
-    },
-    {
-      "label": "Foreground service demo video \u2014 Dockie",
-      "file_type": "document",
-      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "play_fgs_video_script_foreground_service_demo_video_dockie",
-      "community": 33,
-      "community_name": "Foreground service demo video \u2014 Dockie",
-      "norm_label": "foreground service demo video \u2014 dockie"
-    },
-    {
-      "label": "Target",
-      "file_type": "document",
-      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "play_fgs_video_script_target",
-      "community": 33,
-      "community_name": "Foreground service demo video \u2014 Dockie",
-      "norm_label": "target"
-    },
-    {
-      "label": "Recording steps (device or emulator)",
-      "file_type": "document",
-      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "play_fgs_video_script_recording_steps_device_or_emulator",
-      "community": 33,
-      "community_name": "Foreground service demo video \u2014 Dockie",
-      "norm_label": "recording steps (device or emulator)"
-    },
-    {
-      "label": "What the reviewer must see",
-      "file_type": "document",
-      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "play_fgs_video_script_what_the_reviewer_must_see",
-      "community": 33,
-      "community_name": "Foreground service demo video \u2014 Dockie",
-      "norm_label": "what the reviewer must see"
-    },
-    {
-      "label": "Caption / narration (ready to read)",
-      "file_type": "document",
-      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "play_fgs_video_script_caption_narration_ready_to_read",
-      "community": 33,
-      "community_name": "Foreground service demo video \u2014 Dockie",
-      "norm_label": "caption / narration (ready to read)"
-    },
-    {
-      "label": "Manual remaining",
-      "file_type": "document",
-      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
-      "source_location": "L36",
-      "_origin": "ast",
-      "id": "play_fgs_video_script_manual_remaining",
-      "community": 33,
-      "community_name": "Foreground service demo video \u2014 Dockie",
-      "norm_label": "manual remaining"
-    },
-    {
-      "label": "README.md",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "readme",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "readme.md"
-    },
-    {
-      "label": "Dockie",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "readme_dockie",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "dockie"
-    },
-    {
-      "label": "Download",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "readme_download",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "download"
-    },
-    {
-      "label": "What Dockie does",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "readme_what_dockie_does",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "what dockie does"
-    },
-    {
-      "label": "How it works",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "readme_how_it_works",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "how it works"
-    },
-    {
-      "label": "Required permission",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L50",
-      "_origin": "ast",
-      "id": "readme_required_permission",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "required permission"
-    },
-    {
-      "label": "Background-service design",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L60",
-      "_origin": "ast",
-      "id": "readme_background_service_design",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "background-service design"
-    },
-    {
-      "label": "Wireless-charging detection",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L74",
-      "_origin": "ast",
-      "id": "readme_wireless_charging_detection",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "wireless-charging detection"
-    },
-    {
-      "label": "100% battery behavior",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L79",
-      "_origin": "ast",
-      "id": "readme_100_battery_behavior",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "100% battery behavior"
-    },
-    {
-      "label": "Stay-awake duration",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L86",
-      "_origin": "ast",
-      "id": "readme_stay_awake_duration",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "stay-awake duration"
-    },
-    {
-      "label": "Docking alert and status-bar icon",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L98",
-      "_origin": "ast",
-      "id": "readme_docking_alert_and_status_bar_icon",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "docking alert and status-bar icon"
-    },
-    {
-      "label": "After a manual screen-off",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L113",
-      "_origin": "ast",
-      "id": "readme_after_a_manual_screen_off",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "after a manual screen-off"
-    },
-    {
-      "label": "State-restoration strategy",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L124",
-      "_origin": "ast",
-      "id": "readme_state_restoration_strategy",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "state-restoration strategy"
-    },
-    {
-      "label": "Known Android limitations",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L142",
-      "_origin": "ast",
-      "id": "readme_known_android_limitations",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "known android limitations"
-    },
-    {
-      "label": "Permissions (all of them)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L156",
-      "_origin": "ast",
-      "id": "readme_permissions_all_of_them",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "permissions (all of them)"
-    },
-    {
-      "label": "Build instructions",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L168",
-      "_origin": "ast",
-      "id": "readme_build_instructions",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "build instructions"
-    },
-    {
-      "label": "Google Play (Closed Testing)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L192",
-      "_origin": "ast",
-      "id": "readme_google_play_closed_testing",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "google play (closed testing)"
-    },
-    {
-      "label": "Project structure",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L213",
-      "_origin": "ast",
-      "id": "readme_project_structure",
-      "community": 18,
-      "community_name": "Dockie",
-      "norm_label": "project structure"
-    },
-    {
-      "label": "SIGNING_MIGRATION.md",
-      "file_type": "document",
-      "source_file": "SIGNING_MIGRATION.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "signing_migration",
-      "community": 30,
-      "community_name": "Dockie signing migration (Play App Signing)",
-      "norm_label": "signing_migration.md"
-    },
-    {
-      "label": "Dockie signing migration (Play App Signing)",
-      "file_type": "document",
-      "source_file": "SIGNING_MIGRATION.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "signing_migration_dockie_signing_migration_play_app_signing",
-      "community": 30,
-      "community_name": "Dockie signing migration (Play App Signing)",
-      "norm_label": "dockie signing migration (play app signing)"
-    },
-    {
-      "label": "Existing production identity (verified)",
-      "file_type": "document",
-      "source_file": "SIGNING_MIGRATION.md",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "signing_migration_existing_production_identity_verified",
-      "community": 30,
-      "community_name": "Dockie signing migration (Play App Signing)",
-      "norm_label": "existing production identity (verified)"
-    },
-    {
-      "label": "Artifact certificate match (verified)",
-      "file_type": "document",
-      "source_file": "SIGNING_MIGRATION.md",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "signing_migration_artifact_certificate_match_verified",
-      "community": 30,
-      "community_name": "Dockie signing migration (Play App Signing)",
-      "norm_label": "artifact certificate match (verified)"
-    },
-    {
-      "label": "Prepared local files (never commit)",
-      "file_type": "document",
-      "source_file": "SIGNING_MIGRATION.md",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "signing_migration_prepared_local_files_never_commit",
-      "community": 30,
-      "community_name": "Dockie signing migration (Play App Signing)",
-      "norm_label": "prepared local files (never commit)"
-    },
-    {
-      "label": "Play certificate status",
-      "file_type": "document",
-      "source_file": "SIGNING_MIGRATION.md",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "signing_migration_play_certificate_status",
-      "community": 30,
-      "community_name": "Dockie signing migration (Play App Signing)",
-      "norm_label": "play certificate status"
-    },
-    {
-      "label": "Exact safe enrollment procedure",
-      "file_type": "document",
-      "source_file": "SIGNING_MIGRATION.md",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "signing_migration_exact_safe_enrollment_procedure",
-      "community": 30,
-      "community_name": "Dockie signing migration (Play App Signing)",
-      "norm_label": "exact safe enrollment procedure"
-    },
-    {
-      "label": "First AAB to upload",
-      "file_type": "document",
-      "source_file": "SIGNING_MIGRATION.md",
-      "source_location": "L74",
-      "_origin": "ast",
-      "id": "signing_migration_first_aab_to_upload",
-      "community": 30,
-      "community_name": "Dockie signing migration (Play App Signing)",
-      "norm_label": "first aab to upload"
-    },
-    {
-      "label": "ONE remaining manual Play action",
-      "file_type": "document",
-      "source_file": "SIGNING_MIGRATION.md",
-      "source_location": "L82",
-      "_origin": "ast",
-      "id": "signing_migration_one_remaining_manual_play_action",
-      "community": 30,
-      "community_name": "Dockie signing migration (Play App Signing)",
-      "norm_label": "one remaining manual play action"
-    },
-    {
-      "label": "TESTERS.md",
-      "file_type": "document",
-      "source_file": "TESTERS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "testers",
-      "community": 31,
-      "community_name": "Testers \u2014 Dockie closed testing",
-      "norm_label": "testers.md"
-    },
-    {
-      "label": "Testers \u2014 Dockie closed testing",
-      "file_type": "document",
-      "source_file": "TESTERS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "testers_testers_dockie_closed_testing",
-      "community": 31,
-      "community_name": "Testers \u2014 Dockie closed testing",
-      "norm_label": "testers \u2014 dockie closed testing"
-    },
-    {
-      "label": "Why this matters",
-      "file_type": "document",
-      "source_file": "TESTERS.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "testers_why_this_matters",
-      "community": 31,
-      "community_name": "Testers \u2014 Dockie closed testing",
-      "norm_label": "why this matters"
-    },
-    {
-      "label": "Exact opt-in steps (send to each tester)",
-      "file_type": "document",
-      "source_file": "TESTERS.md",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "testers_exact_opt_in_steps_send_to_each_tester",
-      "community": 31,
-      "community_name": "Testers \u2014 Dockie closed testing",
-      "norm_label": "exact opt-in steps (send to each tester)"
-    },
-    {
-      "label": "What to test (short)",
-      "file_type": "document",
-      "source_file": "TESTERS.md",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "testers_what_to_test_short",
-      "community": 31,
-      "community_name": "Testers \u2014 Dockie closed testing",
-      "norm_label": "what to test (short)"
-    },
-    {
-      "label": "How to give useful feedback",
-      "file_type": "document",
-      "source_file": "TESTERS.md",
+      "source_file": "RELEASING.md",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "testers_how_to_give_useful_feedback",
-      "community": 31,
-      "community_name": "Testers \u2014 Dockie closed testing",
-      "norm_label": "how to give useful feedback"
-    },
-    {
-      "label": "Message you can send to testers",
-      "file_type": "document",
-      "source_file": "TESTERS.md",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "testers_message_you_can_send_to_testers",
-      "community": 31,
-      "community_name": "Testers \u2014 Dockie closed testing",
-      "norm_label": "message you can send to testers"
-    },
-    {
-      "label": "Tester list",
-      "file_type": "document",
-      "source_file": "TESTERS.md",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "testers_tester_list",
-      "community": 31,
-      "community_name": "Testers \u2014 Dockie closed testing",
-      "norm_label": "tester list"
+      "id": "releasing_rules",
+      "community": 42,
+      "community_name": "Releasing to Google Play (EYC infrastructure)",
+      "norm_label": "rules"
     },
     {
       "label": "app/build.gradle.kts",
@@ -1060,15 +92,1049 @@
       "norm_label": "app/build.gradle.kts"
     },
     {
+      "label": "release-play.ps1",
+      "file_type": "code",
+      "source_file": "scripts/release-play.ps1",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_release_play",
+      "community": 43,
+      "community_name": "release-play.ps1",
+      "norm_label": "release-play.ps1"
+    },
+    {
+      "label": "ACTIVE_WORK.md",
+      "file_type": "document",
+      "source_file": ".ai/ACTIVE_WORK.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "ACTIVE_WORK.md",
+      "norm_label": "active_work.md",
+      "id": "ai_active_work"
+    },
+    {
+      "label": "Active work",
+      "file_type": "document",
+      "source_file": ".ai/ACTIVE_WORK.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "ACTIVE_WORK.md",
+      "norm_label": "active work",
+      "id": "ai_active_work_active_work"
+    },
+    {
+      "label": "DECISIONS.md",
+      "file_type": "document",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Decisions \u2014 Dockie",
+      "norm_label": "decisions.md",
+      "id": "ai_decisions"
+    },
+    {
+      "label": "Decisions \u2014 Dockie",
+      "file_type": "document",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Decisions \u2014 Dockie",
+      "norm_label": "decisions \u2014 dockie",
+      "id": "ai_decisions_decisions_dockie"
+    },
+    {
+      "label": "D1 \u2014 Wireless-only trigger",
+      "file_type": "document",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Decisions \u2014 Dockie",
+      "norm_label": "d1 \u2014 wireless-only trigger",
+      "id": "ai_decisions_d1_wireless_only_trigger"
+    },
+    {
+      "label": "D2 \u2014 Timeout ownership model",
+      "file_type": "document",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Decisions \u2014 Dockie",
+      "norm_label": "d2 \u2014 timeout ownership model",
+      "id": "ai_decisions_d2_timeout_ownership_model"
+    },
+    {
+      "label": "D3 \u2014 Foreground service type",
+      "file_type": "document",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Decisions \u2014 Dockie",
+      "norm_label": "d3 \u2014 foreground service type",
+      "id": "ai_decisions_d3_foreground_service_type"
+    },
+    {
+      "label": "D4 \u2014 Signing continuity",
+      "file_type": "document",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Decisions \u2014 Dockie",
+      "norm_label": "d4 \u2014 signing continuity",
+      "id": "ai_decisions_d4_signing_continuity"
+    },
+    {
+      "label": "D5 \u2014 Privacy",
+      "file_type": "document",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Decisions \u2014 Dockie",
+      "norm_label": "d5 \u2014 privacy",
+      "id": "ai_decisions_d5_privacy"
+    },
+    {
+      "label": "HANDOFF.md",
+      "file_type": "document",
+      "source_file": ".ai/HANDOFF.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "Handoff \u2014 Dockie",
+      "norm_label": "handoff.md",
+      "id": "ai_handoff"
+    },
+    {
+      "label": "Handoff \u2014 Dockie",
+      "file_type": "document",
+      "source_file": ".ai/HANDOFF.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "Handoff \u2014 Dockie",
+      "norm_label": "handoff \u2014 dockie",
+      "id": "ai_handoff_handoff_dockie"
+    },
+    {
+      "label": "Verified current state (2026-09-22)",
+      "file_type": "document",
+      "source_file": ".ai/HANDOFF.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "Handoff \u2014 Dockie",
+      "norm_label": "verified current state (2026-09-22)",
+      "id": "ai_handoff_verified_current_state_2026_09_22"
+    },
+    {
+      "label": "Exact next steps",
+      "file_type": "document",
+      "source_file": ".ai/HANDOFF.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "Handoff \u2014 Dockie",
+      "norm_label": "exact next steps",
+      "id": "ai_handoff_exact_next_steps"
+    },
+    {
+      "label": "PROJECT_STATE.md",
+      "file_type": "document",
+      "source_file": ".ai/PROJECT_STATE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "PROJECT_STATE.md",
+      "norm_label": "project_state.md",
+      "id": "ai_project_state"
+    },
+    {
+      "label": "Project state \u2014 Dockie",
+      "file_type": "document",
+      "source_file": ".ai/PROJECT_STATE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "PROJECT_STATE.md",
+      "norm_label": "project state \u2014 dockie",
+      "id": "ai_project_state_project_state_dockie"
+    },
+    {
+      "label": "WORKFLOW.md",
+      "file_type": "document",
+      "source_file": ".ai/WORKFLOW.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "WORKFLOW.md",
+      "norm_label": "workflow.md",
+      "id": "ai_workflow"
+    },
+    {
+      "label": "Workflow \u2014 Dockie",
+      "file_type": "document",
+      "source_file": ".ai/WORKFLOW.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "WORKFLOW.md",
+      "norm_label": "workflow \u2014 dockie",
+      "id": "ai_workflow_workflow_dockie"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "CLAUDE.md",
+      "norm_label": "claude.md",
+      "id": "claude"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "CLAUDE.md",
+      "norm_label": "claude.md",
+      "id": "claude_claude_md"
+    },
+    {
+      "label": "CLOSED_TEST_PLAN.md",
+      "file_type": "document",
+      "source_file": "CLOSED_TEST_PLAN.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "Closed test plan \u2014 Dockie",
+      "norm_label": "closed_test_plan.md",
+      "id": "closed_test_plan"
+    },
+    {
+      "label": "Closed test plan \u2014 Dockie",
+      "file_type": "document",
+      "source_file": "CLOSED_TEST_PLAN.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "Closed test plan \u2014 Dockie",
+      "norm_label": "closed test plan \u2014 dockie",
+      "id": "closed_test_plan_closed_test_plan_dockie"
+    },
+    {
+      "label": "Preconditions",
+      "file_type": "document",
+      "source_file": "CLOSED_TEST_PLAN.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "Closed test plan \u2014 Dockie",
+      "norm_label": "preconditions",
+      "id": "closed_test_plan_preconditions"
+    },
+    {
+      "label": "Test matrix",
+      "file_type": "document",
+      "source_file": "CLOSED_TEST_PLAN.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "Closed test plan \u2014 Dockie",
+      "norm_label": "test matrix",
+      "id": "closed_test_plan_test_matrix"
+    },
+    {
+      "label": "Pass criteria for closed-test start",
+      "file_type": "document",
+      "source_file": "CLOSED_TEST_PLAN.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "Closed test plan \u2014 Dockie",
+      "norm_label": "pass criteria for closed-test start",
+      "id": "closed_test_plan_pass_criteria_for_closed_test_start"
+    },
+    {
+      "label": "Feedback format for testers",
+      "file_type": "document",
+      "source_file": "CLOSED_TEST_PLAN.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "Closed test plan \u2014 Dockie",
+      "norm_label": "feedback format for testers",
+      "id": "closed_test_plan_feedback_format_for_testers"
+    },
+    {
+      "label": "GEMINI_IMAGE_REQUESTS.md",
+      "file_type": "document",
+      "source_file": "GEMINI_IMAGE_REQUESTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Gemini image requests \u2014 Dockie Play graphics",
+      "norm_label": "gemini_image_requests.md",
+      "id": "gemini_image_requests"
+    },
+    {
+      "label": "Gemini image requests \u2014 Dockie Play graphics",
+      "file_type": "document",
+      "source_file": "GEMINI_IMAGE_REQUESTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Gemini image requests \u2014 Dockie Play graphics",
+      "norm_label": "gemini image requests \u2014 dockie play graphics",
+      "id": "gemini_image_requests_gemini_image_requests_dockie_play_graphics"
+    },
+    {
+      "label": "1) Feature graphic",
+      "file_type": "document",
+      "source_file": "GEMINI_IMAGE_REQUESTS.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Gemini image requests \u2014 Dockie Play graphics",
+      "norm_label": "1) feature graphic",
+      "id": "gemini_image_requests_1_feature_graphic"
+    },
+    {
+      "label": "2) Optional polished 512\u00d7512 store icon (only if upgrading)",
+      "file_type": "document",
+      "source_file": "GEMINI_IMAGE_REQUESTS.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Gemini image requests \u2014 Dockie Play graphics",
+      "norm_label": "2) optional polished 512\u00d7512 store icon (only if upgrading)",
+      "id": "gemini_image_requests_2_optional_polished_512_512_store_icon_only_if_upgrading"
+    },
+    {
+      "label": "PLAY_CONSOLE_SUBMISSION.md",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "play_console_submission.md",
+      "id": "play_console_submission"
+    },
+    {
+      "label": "Play Console submission answers (Dockie)",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "play console submission answers (dockie)",
+      "id": "play_console_submission_play_console_submission_answers_dockie"
+    },
+    {
+      "label": "App access",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "app access",
+      "id": "play_console_submission_app_access"
+    },
+    {
+      "label": "Ads",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "ads",
+      "id": "play_console_submission_ads"
+    },
+    {
+      "label": "Content rating (IARC questionnaire \u2014 expected answers)",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "content rating (iarc questionnaire \u2014 expected answers)",
+      "id": "play_console_submission_content_rating_iarc_questionnaire_expected_answers"
+    },
+    {
+      "label": "Target audience",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "target audience",
+      "id": "play_console_submission_target_audience"
+    },
+    {
+      "label": "News app",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "news app",
+      "id": "play_console_submission_news_app"
+    },
+    {
+      "label": "COVID-19 contact tracing / status apps",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "covid-19 contact tracing / status apps",
+      "id": "play_console_submission_covid_19_contact_tracing_status_apps"
+    },
+    {
+      "label": "Data safety",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "data safety",
+      "id": "play_console_submission_data_safety"
+    },
+    {
+      "label": "Overview (verified from code)",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "overview (verified from code)",
+      "id": "play_console_submission_overview_verified_from_code"
+    },
+    {
+      "label": "Data types",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "data types",
+      "id": "play_console_submission_data_types"
+    },
+    {
+      "label": "Sensitive permissions used on-device only (not \u201ccollected\u201d for Data safety)",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L70",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "sensitive permissions used on-device only (not \u201ccollected\u201d for data safety)",
+      "id": "play_console_submission_sensitive_permissions_used_on_device_only_not_collected_for_data_safety"
+    },
+    {
+      "label": "Government apps",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "government apps",
+      "id": "play_console_submission_government_apps"
+    },
+    {
+      "label": "Financial features",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "financial features",
+      "id": "play_console_submission_financial_features"
+    },
+    {
+      "label": "Health",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "health",
+      "id": "play_console_submission_health"
+    },
+    {
+      "label": "Privacy policy",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L91",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "privacy policy",
+      "id": "play_console_submission_privacy_policy"
+    },
+    {
+      "label": "Permissions declarations",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L96",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "permissions declarations",
+      "id": "play_console_submission_permissions_declarations"
+    },
+    {
+      "label": "WRITE_SETTINGS / Modify system settings",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "write_settings / modify system settings",
+      "id": "play_console_submission_write_settings_modify_system_settings"
+    },
+    {
+      "label": "Notifications (`POST_NOTIFICATIONS`)",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L103",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "notifications (`post_notifications`)",
+      "id": "play_console_submission_notifications_post_notifications"
+    },
+    {
+      "label": "Foreground service declaration",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L108",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "foreground service declaration",
+      "id": "play_console_submission_foreground_service_declaration"
+    },
+    {
+      "label": "Other declarations",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L122",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "other declarations",
+      "id": "play_console_submission_other_declarations"
+    },
+    {
+      "label": "Store listing text (en-US) \u2014 ready to paste",
+      "file_type": "document",
+      "source_file": "PLAY_CONSOLE_SUBMISSION.md",
+      "source_location": "L130",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "Play Console submission answers (Dockie)",
+      "norm_label": "store listing text (en-us) \u2014 ready to paste",
+      "id": "play_console_submission_store_listing_text_en_us_ready_to_paste"
+    },
+    {
+      "label": "PLAY_FGS_VIDEO_SCRIPT.md",
+      "file_type": "document",
+      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "Foreground service demo video \u2014 Dockie",
+      "norm_label": "play_fgs_video_script.md",
+      "id": "play_fgs_video_script"
+    },
+    {
+      "label": "Foreground service demo video \u2014 Dockie",
+      "file_type": "document",
+      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "Foreground service demo video \u2014 Dockie",
+      "norm_label": "foreground service demo video \u2014 dockie",
+      "id": "play_fgs_video_script_foreground_service_demo_video_dockie"
+    },
+    {
+      "label": "Target",
+      "file_type": "document",
+      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "Foreground service demo video \u2014 Dockie",
+      "norm_label": "target",
+      "id": "play_fgs_video_script_target"
+    },
+    {
+      "label": "Recording steps (device or emulator)",
+      "file_type": "document",
+      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "Foreground service demo video \u2014 Dockie",
+      "norm_label": "recording steps (device or emulator)",
+      "id": "play_fgs_video_script_recording_steps_device_or_emulator"
+    },
+    {
+      "label": "What the reviewer must see",
+      "file_type": "document",
+      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "Foreground service demo video \u2014 Dockie",
+      "norm_label": "what the reviewer must see",
+      "id": "play_fgs_video_script_what_the_reviewer_must_see"
+    },
+    {
+      "label": "Caption / narration (ready to read)",
+      "file_type": "document",
+      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "Foreground service demo video \u2014 Dockie",
+      "norm_label": "caption / narration (ready to read)",
+      "id": "play_fgs_video_script_caption_narration_ready_to_read"
+    },
+    {
+      "label": "Manual remaining",
+      "file_type": "document",
+      "source_file": "PLAY_FGS_VIDEO_SCRIPT.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "Foreground service demo video \u2014 Dockie",
+      "norm_label": "manual remaining",
+      "id": "play_fgs_video_script_manual_remaining"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "readme.md",
+      "id": "readme"
+    },
+    {
+      "label": "Dockie",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "dockie",
+      "id": "readme_dockie"
+    },
+    {
+      "label": "Download",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "download",
+      "id": "readme_download"
+    },
+    {
+      "label": "What Dockie does",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "what dockie does",
+      "id": "readme_what_dockie_does"
+    },
+    {
+      "label": "How it works",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "how it works",
+      "id": "readme_how_it_works"
+    },
+    {
+      "label": "Required permission",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "required permission",
+      "id": "readme_required_permission"
+    },
+    {
+      "label": "Background-service design",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L60",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "background-service design",
+      "id": "readme_background_service_design"
+    },
+    {
+      "label": "Wireless-charging detection",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "wireless-charging detection",
+      "id": "readme_wireless_charging_detection"
+    },
+    {
+      "label": "100% battery behavior",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "100% battery behavior",
+      "id": "readme_100_battery_behavior"
+    },
+    {
+      "label": "Stay-awake duration",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L86",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "stay-awake duration",
+      "id": "readme_stay_awake_duration"
+    },
+    {
+      "label": "Docking alert and status-bar icon",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "docking alert and status-bar icon",
+      "id": "readme_docking_alert_and_status_bar_icon"
+    },
+    {
+      "label": "After a manual screen-off",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L113",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "after a manual screen-off",
+      "id": "readme_after_a_manual_screen_off"
+    },
+    {
+      "label": "State-restoration strategy",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "state-restoration strategy",
+      "id": "readme_state_restoration_strategy"
+    },
+    {
+      "label": "Known Android limitations",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L142",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "known android limitations",
+      "id": "readme_known_android_limitations"
+    },
+    {
+      "label": "Permissions (all of them)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L156",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "permissions (all of them)",
+      "id": "readme_permissions_all_of_them"
+    },
+    {
+      "label": "Build instructions",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L168",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "build instructions",
+      "id": "readme_build_instructions"
+    },
+    {
+      "label": "Google Play (Closed Testing)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L192",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "google play (closed testing)",
+      "id": "readme_google_play_closed_testing"
+    },
+    {
+      "label": "Project structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L213",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Dockie",
+      "norm_label": "project structure",
+      "id": "readme_project_structure"
+    },
+    {
+      "label": "SIGNING_MIGRATION.md",
+      "file_type": "document",
+      "source_file": "SIGNING_MIGRATION.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "Dockie signing migration (Play App Signing)",
+      "norm_label": "signing_migration.md",
+      "id": "signing_migration"
+    },
+    {
+      "label": "Dockie signing migration (Play App Signing)",
+      "file_type": "document",
+      "source_file": "SIGNING_MIGRATION.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "Dockie signing migration (Play App Signing)",
+      "norm_label": "dockie signing migration (play app signing)",
+      "id": "signing_migration_dockie_signing_migration_play_app_signing"
+    },
+    {
+      "label": "Existing production identity (verified)",
+      "file_type": "document",
+      "source_file": "SIGNING_MIGRATION.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "Dockie signing migration (Play App Signing)",
+      "norm_label": "existing production identity (verified)",
+      "id": "signing_migration_existing_production_identity_verified"
+    },
+    {
+      "label": "Artifact certificate match (verified)",
+      "file_type": "document",
+      "source_file": "SIGNING_MIGRATION.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "Dockie signing migration (Play App Signing)",
+      "norm_label": "artifact certificate match (verified)",
+      "id": "signing_migration_artifact_certificate_match_verified"
+    },
+    {
+      "label": "Prepared local files (never commit)",
+      "file_type": "document",
+      "source_file": "SIGNING_MIGRATION.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "Dockie signing migration (Play App Signing)",
+      "norm_label": "prepared local files (never commit)",
+      "id": "signing_migration_prepared_local_files_never_commit"
+    },
+    {
+      "label": "Play certificate status",
+      "file_type": "document",
+      "source_file": "SIGNING_MIGRATION.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "Dockie signing migration (Play App Signing)",
+      "norm_label": "play certificate status",
+      "id": "signing_migration_play_certificate_status"
+    },
+    {
+      "label": "Exact safe enrollment procedure",
+      "file_type": "document",
+      "source_file": "SIGNING_MIGRATION.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "Dockie signing migration (Play App Signing)",
+      "norm_label": "exact safe enrollment procedure",
+      "id": "signing_migration_exact_safe_enrollment_procedure"
+    },
+    {
+      "label": "First AAB to upload",
+      "file_type": "document",
+      "source_file": "SIGNING_MIGRATION.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "Dockie signing migration (Play App Signing)",
+      "norm_label": "first aab to upload",
+      "id": "signing_migration_first_aab_to_upload"
+    },
+    {
+      "label": "ONE remaining manual Play action",
+      "file_type": "document",
+      "source_file": "SIGNING_MIGRATION.md",
+      "source_location": "L82",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "Dockie signing migration (Play App Signing)",
+      "norm_label": "one remaining manual play action",
+      "id": "signing_migration_one_remaining_manual_play_action"
+    },
+    {
+      "label": "TESTERS.md",
+      "file_type": "document",
+      "source_file": "TESTERS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Testers \u2014 Dockie closed testing",
+      "norm_label": "testers.md",
+      "id": "testers"
+    },
+    {
+      "label": "Testers \u2014 Dockie closed testing",
+      "file_type": "document",
+      "source_file": "TESTERS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Testers \u2014 Dockie closed testing",
+      "norm_label": "testers \u2014 dockie closed testing",
+      "id": "testers_testers_dockie_closed_testing"
+    },
+    {
+      "label": "Why this matters",
+      "file_type": "document",
+      "source_file": "TESTERS.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Testers \u2014 Dockie closed testing",
+      "norm_label": "why this matters",
+      "id": "testers_why_this_matters"
+    },
+    {
+      "label": "Exact opt-in steps (send to each tester)",
+      "file_type": "document",
+      "source_file": "TESTERS.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Testers \u2014 Dockie closed testing",
+      "norm_label": "exact opt-in steps (send to each tester)",
+      "id": "testers_exact_opt_in_steps_send_to_each_tester"
+    },
+    {
+      "label": "What to test (short)",
+      "file_type": "document",
+      "source_file": "TESTERS.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Testers \u2014 Dockie closed testing",
+      "norm_label": "what to test (short)",
+      "id": "testers_what_to_test_short"
+    },
+    {
+      "label": "How to give useful feedback",
+      "file_type": "document",
+      "source_file": "TESTERS.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Testers \u2014 Dockie closed testing",
+      "norm_label": "how to give useful feedback",
+      "id": "testers_how_to_give_useful_feedback"
+    },
+    {
+      "label": "Message you can send to testers",
+      "file_type": "document",
+      "source_file": "TESTERS.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Testers \u2014 Dockie closed testing",
+      "norm_label": "message you can send to testers",
+      "id": "testers_message_you_can_send_to_testers"
+    },
+    {
+      "label": "Tester list",
+      "file_type": "document",
+      "source_file": "TESTERS.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Testers \u2014 Dockie closed testing",
+      "norm_label": "tester list",
+      "id": "testers_tester_list"
+    },
+    {
       "label": "MainScreen.kt",
       "file_type": "code",
       "source_file": "app/src/main/java/com/dockie/app/ui/screens/MainScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "app_src_main_java_com_dockie_app_ui_screens_mainscreen",
       "community": 3,
-      "community_name": ".onCreate",
-      "norm_label": "mainscreen.kt"
+      "community_name": "SettingsScreen",
+      "norm_label": "mainscreen.kt",
+      "id": "app_src_main_java_com_dockie_app_ui_screens_mainscreen"
     },
     {
       "label": "MainScreen()",
@@ -1076,10 +1142,10 @@
       "source_file": "app/src/main/java/com/dockie/app/ui/screens/MainScreen.kt",
       "source_location": "L44",
       "_origin": "ast",
-      "id": "app_src_main_java_com_dockie_app_ui_screens_mainscreen_mainscreen",
       "community": 3,
-      "community_name": ".onCreate",
-      "norm_label": "mainscreen()"
+      "community_name": "SettingsScreen",
+      "norm_label": "mainscreen()",
+      "id": "app_src_main_java_com_dockie_app_ui_screens_mainscreen_mainscreen"
     },
     {
       "label": "AppState",
@@ -1087,10 +1153,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "appstate",
       "community": 3,
-      "community_name": ".onCreate",
-      "norm_label": "appstate"
+      "community_name": "SettingsScreen",
+      "norm_label": "appstate",
+      "id": "appstate"
     },
     {
       "label": "Modifier",
@@ -1098,10 +1164,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "modifier",
       "community": 3,
-      "community_name": ".onCreate",
-      "norm_label": "modifier"
+      "community_name": "SettingsScreen",
+      "norm_label": "modifier",
+      "id": "modifier"
     },
     {
       "label": "DockieApp.kt",
@@ -1153,8 +1219,8 @@
       "source_file": "app/src/main/java/com/dockie/app/MainActivity.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
-      "community_name": ".onCreate",
+      "community": 0,
+      "community_name": "MainViewModel",
       "norm_label": "mainactivity.kt",
       "id": "app_src_main_java_com_dockie_app_mainactivity"
     },
@@ -1164,8 +1230,8 @@
       "source_file": "app/src/main/java/com/dockie/app/MainActivity.kt",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 3,
-      "community_name": ".onCreate",
+      "community": 0,
+      "community_name": "MainViewModel",
       "norm_label": "mainactivity",
       "id": "app_src_main_java_com_dockie_app_mainactivity_mainactivity"
     },
@@ -1175,8 +1241,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 3,
-      "community_name": ".onCreate",
+      "community": 0,
+      "community_name": "MainViewModel",
       "norm_label": "componentactivity",
       "id": "componentactivity"
     },
@@ -1187,7 +1253,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": ".oncreate()",
       "id": "app_src_main_java_com_dockie_app_mainactivity_mainactivity_oncreate"
     },
@@ -1198,7 +1264,7 @@
       "source_location": "",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": "bundle",
       "id": "bundle"
     },
@@ -1208,8 +1274,8 @@
       "source_file": "app/src/main/java/com/dockie/app/MainActivity.kt",
       "source_location": "L164",
       "_origin": "ast",
-      "community": 3,
-      "community_name": ".onCreate",
+      "community": 0,
+      "community_name": "MainViewModel",
       "norm_label": ".onresume()",
       "id": "app_src_main_java_com_dockie_app_mainactivity_mainactivity_onresume"
     },
@@ -2914,7 +2980,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": "onboardingflow.kt",
       "id": "app_src_main_java_com_dockie_app_ui_screens_onboardingflow"
     },
@@ -2925,7 +2991,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": "onboardingflow()",
       "id": "app_src_main_java_com_dockie_app_ui_screens_onboardingflow_onboardingflow"
     },
@@ -2936,7 +3002,7 @@
       "source_location": "",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": "modifier",
       "id": "app_src_main_java_com_dockie_app_ui_screens_onboardingflow_kt_modifier"
     },
@@ -2947,7 +3013,7 @@
       "source_location": "L129",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": "dotsrow()",
       "id": "app_src_main_java_com_dockie_app_ui_screens_onboardingflow_dotsrow"
     },
@@ -2958,7 +3024,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": "dockart()",
       "id": "app_src_main_java_com_dockie_app_ui_screens_onboardingflow_dockart"
     },
@@ -2969,7 +3035,7 @@
       "source_location": "L247",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": "restoreart()",
       "id": "app_src_main_java_com_dockie_app_ui_screens_onboardingflow_restoreart"
     },
@@ -2980,7 +3046,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": "permissionscreen.kt",
       "id": "app_src_main_java_com_dockie_app_ui_screens_permissionscreen"
     },
@@ -2991,7 +3057,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": "permissionscreen()",
       "id": "app_src_main_java_com_dockie_app_ui_screens_permissionscreen_permissionscreen"
     },
@@ -3002,7 +3068,7 @@
       "source_location": "",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": "modifier",
       "id": "app_src_main_java_com_dockie_app_ui_screens_permissionscreen_kt_modifier"
     },
@@ -3012,8 +3078,8 @@
       "source_file": "app/src/main/java/com/dockie/app/ui/screens/SettingsScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "MainViewModel",
+      "community": 3,
+      "community_name": "SettingsScreen",
       "norm_label": "settingsscreen.kt",
       "id": "app_src_main_java_com_dockie_app_ui_screens_settingsscreen"
     },
@@ -3023,8 +3089,8 @@
       "source_file": "app/src/main/java/com/dockie/app/ui/screens/SettingsScreen.kt",
       "source_location": "L62",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "MainViewModel",
+      "community": 3,
+      "community_name": "SettingsScreen",
       "norm_label": "settingsscreen()",
       "id": "app_src_main_java_com_dockie_app_ui_screens_settingsscreen_settingsscreen"
     },
@@ -3034,8 +3100,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "MainViewModel",
+      "community": 3,
+      "community_name": "SettingsScreen",
       "norm_label": "modifier",
       "id": "app_src_main_java_com_dockie_app_ui_screens_settingsscreen_kt_modifier"
     },
@@ -3045,8 +3111,8 @@
       "source_file": "app/src/main/java/com/dockie/app/ui/screens/SettingsScreen.kt",
       "source_location": "L326",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "MainViewModel",
+      "community": 3,
+      "community_name": "SettingsScreen",
       "norm_label": "customdurationdialog()",
       "id": "app_src_main_java_com_dockie_app_ui_screens_settingsscreen_customdurationdialog"
     },
@@ -3056,8 +3122,8 @@
       "source_file": "app/src/main/java/com/dockie/app/ui/screens/SettingsScreen.kt",
       "source_location": "L405",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "MainViewModel",
+      "community": 3,
+      "community_name": "SettingsScreen",
       "norm_label": "wheelcolumn()",
       "id": "app_src_main_java_com_dockie_app_ui_screens_settingsscreen_wheelcolumn"
     },
@@ -3067,8 +3133,8 @@
       "source_file": "app/src/main/java/com/dockie/app/ui/screens/SettingsScreen.kt",
       "source_location": "L518",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "MainViewModel",
+      "community": 3,
+      "community_name": "SettingsScreen",
       "norm_label": "switchrow()",
       "id": "app_src_main_java_com_dockie_app_ui_screens_settingsscreen_switchrow"
     },
@@ -3078,8 +3144,8 @@
       "source_file": "app/src/main/java/com/dockie/app/ui/screens/SettingsScreen.kt",
       "source_location": "L544",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "MainViewModel",
+      "community": 3,
+      "community_name": "SettingsScreen",
       "norm_label": "section()",
       "id": "app_src_main_java_com_dockie_app_ui_screens_settingsscreen_section"
     },
@@ -3089,8 +3155,8 @@
       "source_file": "app/src/main/java/com/dockie/app/ui/screens/SettingsScreen.kt",
       "source_location": "L569",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "MainViewModel",
+      "community": 3,
+      "community_name": "SettingsScreen",
       "norm_label": "settingsrow()",
       "id": "app_src_main_java_com_dockie_app_ui_screens_settingsscreen_settingsrow"
     },
@@ -3112,7 +3178,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": "theme.kt",
       "id": "app_src_main_java_com_dockie_app_ui_theme_theme"
     },
@@ -3123,7 +3189,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "community": 3,
-      "community_name": ".onCreate",
+      "community_name": "SettingsScreen",
       "norm_label": "dockietheme()",
       "id": "app_src_main_java_com_dockie_app_ui_theme_theme_dockietheme"
     },
@@ -3885,133 +3951,12 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".ai/ACTIVE_WORK.md",
-      "source_location": "L1",
+      "source_file": "AGENTS.md",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "ai_active_work",
-      "target": "ai_active_work_active_work",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "ai_decisions",
-      "target": "ai_decisions_decisions_dockie",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "ai_decisions_decisions_dockie",
-      "target": "ai_decisions_d1_wireless_only_trigger",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "ai_decisions_decisions_dockie",
-      "target": "ai_decisions_d2_timeout_ownership_model",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "ai_decisions_decisions_dockie",
-      "target": "ai_decisions_d3_foreground_service_type",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "ai_decisions_decisions_dockie",
-      "target": "ai_decisions_d4_signing_continuity",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".ai/DECISIONS.md",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "ai_decisions_decisions_dockie",
-      "target": "ai_decisions_d5_privacy",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".ai/HANDOFF.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "ai_handoff",
-      "target": "ai_handoff_handoff_dockie",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".ai/HANDOFF.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "ai_handoff_handoff_dockie",
-      "target": "ai_handoff_exact_next_steps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".ai/HANDOFF.md",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "ai_handoff_handoff_dockie",
-      "target": "ai_handoff_verified_current_state_2026_09_22",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".ai/PROJECT_STATE.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "ai_project_state",
-      "target": "ai_project_state_project_state_dockie",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".ai/WORKFLOW.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "ai_workflow",
-      "target": "ai_workflow_workflow_dockie",
+      "source": "agents",
+      "target": "agents_eyc_digital_play_publishing",
       "confidence_score": 1.0
     },
     {
@@ -4028,13 +3973,178 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "RELEASING.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "releasing",
+      "target": "releasing_releasing_to_google_play_eyc_infrastructure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RELEASING.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "releasing_releasing_to_google_play_eyc_infrastructure",
+      "target": "releasing_release",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RELEASING.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "releasing_releasing_to_google_play_eyc_infrastructure",
+      "target": "releasing_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ai/ACTIVE_WORK.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "ai_active_work",
+      "target": "ai_active_work_active_work"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "ai_decisions",
+      "target": "ai_decisions_decisions_dockie"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "ai_decisions_decisions_dockie",
+      "target": "ai_decisions_d1_wireless_only_trigger"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "ai_decisions_decisions_dockie",
+      "target": "ai_decisions_d2_timeout_ownership_model"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "ai_decisions_decisions_dockie",
+      "target": "ai_decisions_d3_foreground_service_type"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "ai_decisions_decisions_dockie",
+      "target": "ai_decisions_d4_signing_continuity"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ai/DECISIONS.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "ai_decisions_decisions_dockie",
+      "target": "ai_decisions_d5_privacy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ai/HANDOFF.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "ai_handoff",
+      "target": "ai_handoff_handoff_dockie"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ai/HANDOFF.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "ai_handoff_handoff_dockie",
+      "target": "ai_handoff_exact_next_steps"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ai/HANDOFF.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "ai_handoff_handoff_dockie",
+      "target": "ai_handoff_verified_current_state_2026_09_22"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ai/PROJECT_STATE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "ai_project_state",
+      "target": "ai_project_state_project_state_dockie"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ai/WORKFLOW.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "ai_workflow",
+      "target": "ai_workflow_workflow_dockie"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "claude",
-      "target": "claude_claude_md",
-      "confidence_score": 1.0
+      "target": "claude_claude_md"
     },
     {
       "relation": "contains",
@@ -4043,9 +4153,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "closed_test_plan",
-      "target": "closed_test_plan_closed_test_plan_dockie",
-      "confidence_score": 1.0
+      "target": "closed_test_plan_closed_test_plan_dockie"
     },
     {
       "relation": "contains",
@@ -4054,9 +4164,9 @@
       "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "closed_test_plan_closed_test_plan_dockie",
-      "target": "closed_test_plan_feedback_format_for_testers",
-      "confidence_score": 1.0
+      "target": "closed_test_plan_feedback_format_for_testers"
     },
     {
       "relation": "contains",
@@ -4065,9 +4175,9 @@
       "source_location": "L43",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "closed_test_plan_closed_test_plan_dockie",
-      "target": "closed_test_plan_pass_criteria_for_closed_test_start",
-      "confidence_score": 1.0
+      "target": "closed_test_plan_pass_criteria_for_closed_test_start"
     },
     {
       "relation": "contains",
@@ -4076,9 +4186,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "closed_test_plan_closed_test_plan_dockie",
-      "target": "closed_test_plan_preconditions",
-      "confidence_score": 1.0
+      "target": "closed_test_plan_preconditions"
     },
     {
       "relation": "contains",
@@ -4087,9 +4197,9 @@
       "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "closed_test_plan_closed_test_plan_dockie",
-      "target": "closed_test_plan_test_matrix",
-      "confidence_score": 1.0
+      "target": "closed_test_plan_test_matrix"
     },
     {
       "relation": "contains",
@@ -4098,9 +4208,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "gemini_image_requests",
-      "target": "gemini_image_requests_gemini_image_requests_dockie_play_graphics",
-      "confidence_score": 1.0
+      "target": "gemini_image_requests_gemini_image_requests_dockie_play_graphics"
     },
     {
       "relation": "contains",
@@ -4109,9 +4219,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "gemini_image_requests_gemini_image_requests_dockie_play_graphics",
-      "target": "gemini_image_requests_1_feature_graphic",
-      "confidence_score": 1.0
+      "target": "gemini_image_requests_1_feature_graphic"
     },
     {
       "relation": "contains",
@@ -4120,9 +4230,9 @@
       "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "gemini_image_requests_gemini_image_requests_dockie_play_graphics",
-      "target": "gemini_image_requests_2_optional_polished_512_512_store_icon_only_if_upgrading",
-      "confidence_score": 1.0
+      "target": "gemini_image_requests_2_optional_polished_512_512_store_icon_only_if_upgrading"
     },
     {
       "relation": "contains",
@@ -4131,9 +4241,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission",
-      "target": "play_console_submission_play_console_submission_answers_dockie",
-      "confidence_score": 1.0
+      "target": "play_console_submission_play_console_submission_answers_dockie"
     },
     {
       "relation": "contains",
@@ -4142,9 +4252,9 @@
       "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_ads",
-      "confidence_score": 1.0
+      "target": "play_console_submission_ads"
     },
     {
       "relation": "contains",
@@ -4153,9 +4263,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_app_access",
-      "confidence_score": 1.0
+      "target": "play_console_submission_app_access"
     },
     {
       "relation": "contains",
@@ -4164,9 +4274,9 @@
       "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_content_rating_iarc_questionnaire_expected_answers",
-      "confidence_score": 1.0
+      "target": "play_console_submission_content_rating_iarc_questionnaire_expected_answers"
     },
     {
       "relation": "contains",
@@ -4175,9 +4285,9 @@
       "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_covid_19_contact_tracing_status_apps",
-      "confidence_score": 1.0
+      "target": "play_console_submission_covid_19_contact_tracing_status_apps"
     },
     {
       "relation": "contains",
@@ -4186,9 +4296,9 @@
       "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_data_safety",
-      "confidence_score": 1.0
+      "target": "play_console_submission_data_safety"
     },
     {
       "relation": "contains",
@@ -4197,9 +4307,9 @@
       "source_location": "L83",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_financial_features",
-      "confidence_score": 1.0
+      "target": "play_console_submission_financial_features"
     },
     {
       "relation": "contains",
@@ -4208,9 +4318,9 @@
       "source_location": "L108",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_foreground_service_declaration",
-      "confidence_score": 1.0
+      "target": "play_console_submission_foreground_service_declaration"
     },
     {
       "relation": "contains",
@@ -4219,9 +4329,9 @@
       "source_location": "L79",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_government_apps",
-      "confidence_score": 1.0
+      "target": "play_console_submission_government_apps"
     },
     {
       "relation": "contains",
@@ -4230,9 +4340,9 @@
       "source_location": "L87",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_health",
-      "confidence_score": 1.0
+      "target": "play_console_submission_health"
     },
     {
       "relation": "contains",
@@ -4241,9 +4351,9 @@
       "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_news_app",
-      "confidence_score": 1.0
+      "target": "play_console_submission_news_app"
     },
     {
       "relation": "contains",
@@ -4252,9 +4362,9 @@
       "source_location": "L122",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_other_declarations",
-      "confidence_score": 1.0
+      "target": "play_console_submission_other_declarations"
     },
     {
       "relation": "contains",
@@ -4263,9 +4373,9 @@
       "source_location": "L96",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_permissions_declarations",
-      "confidence_score": 1.0
+      "target": "play_console_submission_permissions_declarations"
     },
     {
       "relation": "contains",
@@ -4274,9 +4384,9 @@
       "source_location": "L91",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_privacy_policy",
-      "confidence_score": 1.0
+      "target": "play_console_submission_privacy_policy"
     },
     {
       "relation": "contains",
@@ -4285,9 +4395,9 @@
       "source_location": "L130",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_store_listing_text_en_us_ready_to_paste",
-      "confidence_score": 1.0
+      "target": "play_console_submission_store_listing_text_en_us_ready_to_paste"
     },
     {
       "relation": "contains",
@@ -4296,9 +4406,9 @@
       "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_play_console_submission_answers_dockie",
-      "target": "play_console_submission_target_audience",
-      "confidence_score": 1.0
+      "target": "play_console_submission_target_audience"
     },
     {
       "relation": "contains",
@@ -4307,9 +4417,9 @@
       "source_location": "L64",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_data_safety",
-      "target": "play_console_submission_data_types",
-      "confidence_score": 1.0
+      "target": "play_console_submission_data_types"
     },
     {
       "relation": "contains",
@@ -4318,9 +4428,9 @@
       "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_data_safety",
-      "target": "play_console_submission_overview_verified_from_code",
-      "confidence_score": 1.0
+      "target": "play_console_submission_overview_verified_from_code"
     },
     {
       "relation": "contains",
@@ -4329,9 +4439,9 @@
       "source_location": "L70",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_data_safety",
-      "target": "play_console_submission_sensitive_permissions_used_on_device_only_not_collected_for_data_safety",
-      "confidence_score": 1.0
+      "target": "play_console_submission_sensitive_permissions_used_on_device_only_not_collected_for_data_safety"
     },
     {
       "relation": "contains",
@@ -4340,9 +4450,9 @@
       "source_location": "L103",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_permissions_declarations",
-      "target": "play_console_submission_notifications_post_notifications",
-      "confidence_score": 1.0
+      "target": "play_console_submission_notifications_post_notifications"
     },
     {
       "relation": "contains",
@@ -4351,9 +4461,9 @@
       "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_console_submission_permissions_declarations",
-      "target": "play_console_submission_write_settings_modify_system_settings",
-      "confidence_score": 1.0
+      "target": "play_console_submission_write_settings_modify_system_settings"
     },
     {
       "relation": "contains",
@@ -4362,9 +4472,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_fgs_video_script",
-      "target": "play_fgs_video_script_foreground_service_demo_video_dockie",
-      "confidence_score": 1.0
+      "target": "play_fgs_video_script_foreground_service_demo_video_dockie"
     },
     {
       "relation": "contains",
@@ -4373,9 +4483,9 @@
       "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_fgs_video_script_foreground_service_demo_video_dockie",
-      "target": "play_fgs_video_script_caption_narration_ready_to_read",
-      "confidence_score": 1.0
+      "target": "play_fgs_video_script_caption_narration_ready_to_read"
     },
     {
       "relation": "contains",
@@ -4384,9 +4494,9 @@
       "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_fgs_video_script_foreground_service_demo_video_dockie",
-      "target": "play_fgs_video_script_manual_remaining",
-      "confidence_score": 1.0
+      "target": "play_fgs_video_script_manual_remaining"
     },
     {
       "relation": "contains",
@@ -4395,9 +4505,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_fgs_video_script_foreground_service_demo_video_dockie",
-      "target": "play_fgs_video_script_recording_steps_device_or_emulator",
-      "confidence_score": 1.0
+      "target": "play_fgs_video_script_recording_steps_device_or_emulator"
     },
     {
       "relation": "contains",
@@ -4406,9 +4516,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_fgs_video_script_foreground_service_demo_video_dockie",
-      "target": "play_fgs_video_script_target",
-      "confidence_score": 1.0
+      "target": "play_fgs_video_script_target"
     },
     {
       "relation": "contains",
@@ -4417,9 +4527,9 @@
       "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "play_fgs_video_script_foreground_service_demo_video_dockie",
-      "target": "play_fgs_video_script_what_the_reviewer_must_see",
-      "confidence_score": 1.0
+      "target": "play_fgs_video_script_what_the_reviewer_must_see"
     },
     {
       "relation": "contains",
@@ -4428,9 +4538,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_dockie",
-      "confidence_score": 1.0
+      "target": "readme_dockie"
     },
     {
       "relation": "contains",
@@ -4439,9 +4549,9 @@
       "source_location": "L79",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_100_battery_behavior",
-      "confidence_score": 1.0
+      "target": "readme_100_battery_behavior"
     },
     {
       "relation": "contains",
@@ -4450,9 +4560,9 @@
       "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_after_a_manual_screen_off",
-      "confidence_score": 1.0
+      "target": "readme_after_a_manual_screen_off"
     },
     {
       "relation": "contains",
@@ -4461,9 +4571,9 @@
       "source_location": "L60",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_background_service_design",
-      "confidence_score": 1.0
+      "target": "readme_background_service_design"
     },
     {
       "relation": "contains",
@@ -4472,9 +4582,9 @@
       "source_location": "L168",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_build_instructions",
-      "confidence_score": 1.0
+      "target": "readme_build_instructions"
     },
     {
       "relation": "contains",
@@ -4483,9 +4593,9 @@
       "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_docking_alert_and_status_bar_icon",
-      "confidence_score": 1.0
+      "target": "readme_docking_alert_and_status_bar_icon"
     },
     {
       "relation": "contains",
@@ -4494,9 +4604,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_download",
-      "confidence_score": 1.0
+      "target": "readme_download"
     },
     {
       "relation": "contains",
@@ -4505,9 +4615,9 @@
       "source_location": "L192",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_google_play_closed_testing",
-      "confidence_score": 1.0
+      "target": "readme_google_play_closed_testing"
     },
     {
       "relation": "contains",
@@ -4516,9 +4626,9 @@
       "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_how_it_works",
-      "confidence_score": 1.0
+      "target": "readme_how_it_works"
     },
     {
       "relation": "contains",
@@ -4527,9 +4637,9 @@
       "source_location": "L142",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_known_android_limitations",
-      "confidence_score": 1.0
+      "target": "readme_known_android_limitations"
     },
     {
       "relation": "contains",
@@ -4538,9 +4648,9 @@
       "source_location": "L156",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_permissions_all_of_them",
-      "confidence_score": 1.0
+      "target": "readme_permissions_all_of_them"
     },
     {
       "relation": "contains",
@@ -4549,9 +4659,9 @@
       "source_location": "L213",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_project_structure",
-      "confidence_score": 1.0
+      "target": "readme_project_structure"
     },
     {
       "relation": "contains",
@@ -4560,9 +4670,9 @@
       "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_required_permission",
-      "confidence_score": 1.0
+      "target": "readme_required_permission"
     },
     {
       "relation": "contains",
@@ -4571,9 +4681,9 @@
       "source_location": "L124",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_state_restoration_strategy",
-      "confidence_score": 1.0
+      "target": "readme_state_restoration_strategy"
     },
     {
       "relation": "contains",
@@ -4582,9 +4692,9 @@
       "source_location": "L86",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_stay_awake_duration",
-      "confidence_score": 1.0
+      "target": "readme_stay_awake_duration"
     },
     {
       "relation": "contains",
@@ -4593,9 +4703,9 @@
       "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_what_dockie_does",
-      "confidence_score": 1.0
+      "target": "readme_what_dockie_does"
     },
     {
       "relation": "contains",
@@ -4604,9 +4714,9 @@
       "source_location": "L74",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_dockie",
-      "target": "readme_wireless_charging_detection",
-      "confidence_score": 1.0
+      "target": "readme_wireless_charging_detection"
     },
     {
       "relation": "contains",
@@ -4615,9 +4725,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "signing_migration",
-      "target": "signing_migration_dockie_signing_migration_play_app_signing",
-      "confidence_score": 1.0
+      "target": "signing_migration_dockie_signing_migration_play_app_signing"
     },
     {
       "relation": "contains",
@@ -4626,9 +4736,9 @@
       "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "signing_migration_dockie_signing_migration_play_app_signing",
-      "target": "signing_migration_exact_safe_enrollment_procedure",
-      "confidence_score": 1.0
+      "target": "signing_migration_exact_safe_enrollment_procedure"
     },
     {
       "relation": "contains",
@@ -4637,9 +4747,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "signing_migration_dockie_signing_migration_play_app_signing",
-      "target": "signing_migration_existing_production_identity_verified",
-      "confidence_score": 1.0
+      "target": "signing_migration_existing_production_identity_verified"
     },
     {
       "relation": "contains",
@@ -4648,9 +4758,9 @@
       "source_location": "L74",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "signing_migration_dockie_signing_migration_play_app_signing",
-      "target": "signing_migration_first_aab_to_upload",
-      "confidence_score": 1.0
+      "target": "signing_migration_first_aab_to_upload"
     },
     {
       "relation": "contains",
@@ -4659,9 +4769,9 @@
       "source_location": "L82",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "signing_migration_dockie_signing_migration_play_app_signing",
-      "target": "signing_migration_one_remaining_manual_play_action",
-      "confidence_score": 1.0
+      "target": "signing_migration_one_remaining_manual_play_action"
     },
     {
       "relation": "contains",
@@ -4670,9 +4780,9 @@
       "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "signing_migration_dockie_signing_migration_play_app_signing",
-      "target": "signing_migration_play_certificate_status",
-      "confidence_score": 1.0
+      "target": "signing_migration_play_certificate_status"
     },
     {
       "relation": "contains",
@@ -4681,9 +4791,9 @@
       "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "signing_migration_existing_production_identity_verified",
-      "target": "signing_migration_artifact_certificate_match_verified",
-      "confidence_score": 1.0
+      "target": "signing_migration_artifact_certificate_match_verified"
     },
     {
       "relation": "contains",
@@ -4692,9 +4802,9 @@
       "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "signing_migration_existing_production_identity_verified",
-      "target": "signing_migration_prepared_local_files_never_commit",
-      "confidence_score": 1.0
+      "target": "signing_migration_prepared_local_files_never_commit"
     },
     {
       "relation": "contains",
@@ -4703,9 +4813,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "testers",
-      "target": "testers_testers_dockie_closed_testing",
-      "confidence_score": 1.0
+      "target": "testers_testers_dockie_closed_testing"
     },
     {
       "relation": "contains",
@@ -4714,9 +4824,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "testers_testers_dockie_closed_testing",
-      "target": "testers_exact_opt_in_steps_send_to_each_tester",
-      "confidence_score": 1.0
+      "target": "testers_exact_opt_in_steps_send_to_each_tester"
     },
     {
       "relation": "contains",
@@ -4725,9 +4835,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "testers_testers_dockie_closed_testing",
-      "target": "testers_how_to_give_useful_feedback",
-      "confidence_score": 1.0
+      "target": "testers_how_to_give_useful_feedback"
     },
     {
       "relation": "contains",
@@ -4736,9 +4846,9 @@
       "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "testers_testers_dockie_closed_testing",
-      "target": "testers_message_you_can_send_to_testers",
-      "confidence_score": 1.0
+      "target": "testers_message_you_can_send_to_testers"
     },
     {
       "relation": "contains",
@@ -4747,9 +4857,9 @@
       "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "testers_testers_dockie_closed_testing",
-      "target": "testers_tester_list",
-      "confidence_score": 1.0
+      "target": "testers_tester_list"
     },
     {
       "relation": "contains",
@@ -4758,9 +4868,9 @@
       "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "testers_testers_dockie_closed_testing",
-      "target": "testers_what_to_test_short",
-      "confidence_score": 1.0
+      "target": "testers_what_to_test_short"
     },
     {
       "relation": "contains",
@@ -4769,9 +4879,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "testers_testers_dockie_closed_testing",
-      "target": "testers_why_this_matters",
-      "confidence_score": 1.0
+      "target": "testers_why_this_matters"
     },
     {
       "relation": "contains",
@@ -4780,9 +4890,9 @@
       "source_location": "L44",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "app_src_main_java_com_dockie_app_ui_screens_mainscreen",
-      "target": "app_src_main_java_com_dockie_app_ui_screens_mainscreen_mainscreen",
-      "confidence_score": 1.0
+      "target": "app_src_main_java_com_dockie_app_ui_screens_mainscreen_mainscreen"
     },
     {
       "relation": "calls",
@@ -4804,9 +4914,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "app_src_main_java_com_dockie_app_ui_screens_mainscreen_mainscreen",
-      "target": "appstate",
-      "confidence_score": 1.0
+      "target": "appstate"
     },
     {
       "relation": "references",
@@ -4816,9 +4926,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "app_src_main_java_com_dockie_app_ui_screens_mainscreen_mainscreen",
-      "target": "modifier",
-      "confidence_score": 1.0
+      "target": "modifier"
     },
     {
       "relation": "contains",
@@ -8576,5 +8686,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7af84c4246c30a6603612e25fefe93bff3a14715"
+  "built_at_commit": "63af1ca6ccd3453151f65ab212b5f633581f9d6b"
 }

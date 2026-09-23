@@ -21,3 +21,8 @@
 4. Paste App content answers from `PLAY_CONSOLE_SUBMISSION.md`
 5. Provide 12 tester Google emails; create opt-in link; start 14-day clock
 6. After SA invited: `./gradlew publishReleaseBundle`
+
+## PAUSED 2026-09-23 - waiting on Gemini visuals (do NOT roll out)
+- Visual work delegated to Gemini: app/launcher/mono/Play-512 icons, feature graphic, screenshots. Do not duplicate.
+- Code 8 AAB (target 36) staged as alpha DRAFT via API; internal has 1.4.0/code 7 live. Next unused versionCode is 9+.
+- On group email: wire to closed track via edits.testers API only. On visual approval: sync, inspect, bump code, rebuild AAB, replace closed draft.
